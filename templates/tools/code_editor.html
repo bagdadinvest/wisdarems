@@ -1,0 +1,20 @@
+<div class="code-editor-container">
+  <textarea id="editor"></textarea>
+</div>
+
+<!-- Include CodeMirror CSS and Monokai Theme -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/theme/monokai.min.css">
+
+<!-- Include CodeMirror JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/javascript/javascript.min.js"></script>
+
+<script>
+  // Initialize CodeMirror with Monokai theme
+  var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+      lineNumbers: true,
+      mode: "javascript",
+      theme: "monokai"  // Applying the dark monokai theme
+  });
+</script>

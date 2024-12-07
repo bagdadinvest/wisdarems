@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Django Shell</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-4">
+        <h1 class="text-center mb-4">Test Django Shell</h1>
+
+        <form id="shellForm" method="POST" class="mb-4">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="commandInput" class="form-label">Enter command:</label>
+                <input type="text" name="command" id="commandInput" class="form-control" placeholder="Enter 'all_users', 'user_count', or 'get_user_types'" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Execute</button>
+        </form>
+
+        <div id="outputArea" class="border rounded p-3">
+            <h2>Command Output:</h2>
+            <pre id="commandOutput" class="bg-light p-2"></pre>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('shellForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var command = document.getElementById('commandInput').value;
+            fetch("{% url 'shell_view' %}", {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: new URLSearchParams({
+                    "command": command
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('commandOutput').textContent = data.output;
+            })
+            .catch(error => {
+                document.getElementById('commandOutput').textContent = "Error executing command";
+            });
+        });
+    </script>
+</body>
+</html>

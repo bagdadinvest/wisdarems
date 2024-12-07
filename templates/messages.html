@@ -1,0 +1,311 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block extra %}
+    <link rel="stylesheet" href="{% static 'assets/css/messages.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/multiselect.css' %}">
+    <script src="{% static 'assets/js/multiselect.js' %}"></script>
+{% endblock %}
+
+{% block title %}Messages{% endblock %}
+
+{% block content %}
+<div class="row">
+<div class="col-md-4">
+  <!-- Button trigger modal -->
+  <button type="button" class="btn bg-gradient-success btn-block mb-3" data-bs-toggle="modal" data-bs-target="#exampleModalMessage">{% trans "Message Modal" %}</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalMessage" tabindex="-1" role="dialog" aria-labelledby="exampleModalMessageTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{% trans "New message to @CT" %}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'app:add_group' %}" method="post" accept-charset="utf-8" class="form" role="form">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="name" class="col-form-label">{% trans "Conversation Name:" %}</label>
+              <input id="name" type="text" class="form-control" name="name" placeholder="Discussion about Test Results">
+            </div>
+            <div class="form-group">
+              <label for="recipient" class="col-form-label">{% trans "Recipient:" %}</label>
+              <select multiple="multiple" id="recipient" name="recipient" class='form-control'>
+                {% for user in recipients %}
+                  <option name="recipient" value="{{ user.pk }}">{{ user.get_full_name }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message" class="col-form-label">{% trans "Message:" %}</label>
+              <textarea class="form-control" name="message" placeholder="Dear Doctor, I have a question..."></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">{% trans "Close" %}</button>
+              <button type="submit" class="btn bg-gradient-primary">{% trans "Send message" %}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% include 'error.html' %}
+<button class="btn btn-primary bottom-padded" data-toggle="modal" data-target="#send">{% trans "Send Message" %}</button>
+<hr />
+<div class="list-group">
+  {% if groups %}
+      {% for group in groups %}
+          <a href="{% url 'app:conversation' group.pk %}" class="list-group-item">
+              <div class="indent">
+                  {% if group.latest_message %}
+                      <span class="badge date-badge">{{ group.latest_message.date }}</span>
+                  {% endif %}
+                  {% if group.has_unread %}<strong>{% endif %}
+                  <span class="name">
+                      {{ group.combined_names }}
+                  </span>{% trans "-" %}<em>{{ group.name }}</em>
+                  {% if group.has_unread %}</strong>{% endif %}
+              </div>
+              <div class="indent">
+                  {% if group.latest_message %}
+                      <span class="text-preview"><em>{% if group.latest_message.sender == user %}You: {% endif %}{{ group.latest_message.preview_text }}</em></span>
+                  {% else %}
+                      <span class="text-preview"><em>{% trans "No Messages" %}</em></span>
+                  {% endif %}
+              </div>
+          </a>
+      {% endfor %}
+  {% else %}
+      <h2 style="text-align: center">{% trans "No messages." %}</h2>
+  {% endif %}
+  <hr />
+  <script>
+      $('#recipient').multiselect();
+
+      function close_modal() {
+          $('#send').modal('hide');
+      }
+  </script>
+</div>
+  
+          
+          
+  
+<div class="row">
+  <div class="col-lg-4 col-md-5 col-12">
+    <div class="class=card blur shadow-blur max-height-vh-70 overflow-auto overflow-x-hidden mb-5 mb-lg-0">
+      <div class="card-header p-3">
+        <h6>{% trans "Friends" %}</h6>
+        <input type="email" class="form-control" placeholder="Search Contact" aria-label="Email" onfocus="focused(this)" onfocusout="defocused(this)">
+      </div>
+      <div class="card-body p-2">
+        <a href="javascript:;" class="d-block p-2 border-radius-lg bg-gradient-primary">
+          <div class="d-flex p-2">
+            <img alt="Image" src="{% static 'assets/img/team-2.jpg' %}" class="avatar shadow">
+            <div class="ms-3">
+              <div class="justify-content-between align-items-center">
+                <h6 class="text-white mb-0">{% trans "Charlie Watson" %}<span class="badge badge-success"></span>
+                </h6>
+                <p class="text-white mb-0 text-sm">{% trans "Typing..." %}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="javascript:;" class="d-block p-2">
+          <div class="d-flex p-2">
+            <img alt="Image" src="{% static 'assets/img/team-1.jpg' %}" class="avatar shadow">
+            <div class="ms-3">
+              <h6 class="mb-0">{% trans "Jane Doe" %}</h6>
+              <p class="text-muted text-xs mb-2">{% trans "1 hour ago" %}</p>
+              <span class="text-muted text-sm col-11 p-0 text-truncate d-block">{% trans "Computer users and programmers" %}</span>
+            </div>
+          </div>
+        </a>
+        <a href="javascript:;" class="d-block p-2">
+          <div class="d-flex p-2">
+            <img alt="Image" src="{% static 'assets/img/team-3.jpg' %}" class="avatar shadow">
+            <div class="ms-3">
+              <h6 class="mb-0">{% trans "Mila Skylar" %}</h6>
+              <p class="text-muted text-xs mb-2">{% trans "24 min ago" %}</p>
+              <span class="text-muted text-sm col-11 p-0 text-truncate d-block">{% trans "You can subscribe to receive weekly..." %}</span>
+            </div>
+          </div>
+        </a>
+        <a href="javascript:;" class="d-block p-2">
+          <div class="d-flex p-2">
+            <img alt="Image" src="{% static 'assets/img/team-5.jpg' %}" class="avatar shadow">
+            <div class="ms-3">
+              <h6 class="mb-0">{% trans "Sofia Scarlett" %}</h6>
+              <p class="text-muted text-xs mb-2">{% trans "7 hours ago" %}</p>
+              <span class="text-muted text-sm col-11 p-0 text-truncate d-block">{% trans "It’s an effective resource regardless.." %}</span>
+            </div>
+          </div>
+        </a>
+        <a href="javascript:;" class="d-block p-2">
+          <div class="d-flex p-2">
+            <img alt="Image" src="{% static 'assets/img/team-4.jpg' %}" class="avatar shadow">
+            <div class="ms-3">
+              <div class="justify-content-between align-items-center">
+                <h6 class="mb-0">{% trans "Tom Klein" %}</h6>
+                <p class="text-muted text-xs mb-2">{% trans "1 day ago" %}</p>
+              </div>
+              <span class="text-muted text-sm col-11 p-0 text-truncate d-block">{% trans "Be sure to check it out if your dev pro..." %}</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="class=col-lg-8 col-md-7 col-12">
+    <div class="card blur shadow-blur max-height-vh-70">
+      <div class="card-header shadow-lg">
+        <div class="row">
+          <div class="col-lg-10 col-8">
+            <div class="d-flex align-items-center">
+              <img alt="Image" src="{% static 'assets/img/team-2.jpg' %}" class="avatar">
+              <div class="ms-3">
+                <h6 class="mb-0 d-block">{% trans "Dr. Alex Johnson" %}</h6>
+                <span class="text-sm text-dark opacity-8">{% trans "last seen today at 1:53am" %}</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1 col-2 my-auto pe-0">
+            <button class="btn btn-icon-only shadow-none text-dark mb-0 me-3 me-sm-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Video call">
+              <i class="ni ni-camera-compact"></i>
+            </button>
+          </div>
+          <div class="col-lg-1 col-2 my-auto ps-0">
+            <div class="dropdown">
+              <button class="btn btn-icon-only shadow-none text-dark mb-0" type="button" data-bs-toggle="dropdown">
+                <i class="ni ni-settings"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end me-sm-n2 p-2" aria-labelledby="chatmsg">
+                <li>
+                  <a class="dropdown-item border-radius-md" href="javascript:;">{% trans "Profile" %}</a>
+                </li>
+                <li>
+                  <a class="dropdown-item border-radius-md" href="javascript:;">{% trans "Mute conversation" %}</a>
+                </li>
+                <li>
+                  <a class="dropdown-item border-radius-md" href="javascript:;">{% trans "Block" %}</a>
+                </li>
+                <li>
+                  <a class="dropdown-item border-radius-md" href="javascript:;">{% trans "Clear chat" %}</a>
+                </li>
+                <li>
+                  <a class="dropdown-item border-radius-md text-danger" href="javascript:;">{% trans "Delete chat" %}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body overflow-auto overflow-x-hidden">
+        <div class="row justify-content-start mb-4">
+          <div class="col-auto">
+            <div class="card">
+              <div class="card-body py-2 px-3">
+                <p class="mb-1">{% trans "Hello Dr. Johnson, I've been experiencing severe headaches for the past week. What could be causing this?" %}</p>
+                <div class="d-flex align-items-center text-sm opacity-6">
+                  <i class="ni ni-check-bold text-sm me-1"></i>
+                  <small>{% trans "3:14am" %}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-end text-right mb-4">
+          <div class="col-auto">
+            <div class="card bg-gray-200">
+              <div class="card-body py-2 px-3">
+                <p class="mb-1">{% trans "Hi, it could be due to various reasons like stress, lack of sleep, or even vision problems. Have you been under a lot of stress lately?" %}</p>
+                <div class="d-flex align-items-center justify-content-end text-sm opacity-6">
+                  <i class="ni ni-check-bold text-sm me-1"></i>
+                  <small>{% trans "4:42pm" %}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-12 text-center">
+            <span class="badge text-dark">{% trans "Wed, 3:27pm" %}</span>
+          </div>
+        </div>
+        <div class="row justify-content-start mb-4">
+          <div class="col-auto">
+            <div class="card">
+              <div class="card-body py-2 px-3">
+                <p class="mb-1">{% trans "Yes, I have been working long hours lately. Could that be the reason?" %}</p>
+                <div class="d-flex align-items-center text-sm opacity-6">
+                  <i class="ni ni-check-bold text-sm me-1"></i>
+                  <small>{% trans "4:31pm" %}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-end text-right mb-4">
+          <div class="col-auto">
+            <div class="card bg-gray-200">
+              <div class="card-body py-2 px-3">
+                <p class="mb-1">{% trans "It’s possible. Try to take regular breaks and ensure you get enough sleep. If the headaches persist, we might need to run some tests." %}</p>
+                <div class="d-flex align-items-center justify-content-end text-sm opacity-6">
+                  <i class="ni ni-check-bold text-sm me-1"></i>
+                  <small>{% trans "4:42pm" %}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-start mb-4">
+          <div class="col-auto">
+            <div class="card">
+              <div class="card-body py-2 px-3">
+                <p class="mb-1">{% trans "Thank you, Doctor. I’ll try to manage my stress better and get more sleep. I’ll keep you updated." %}</p>
+                <div class="d-flex align-items-center text-sm opacity-6">
+                  <i class="ni ni-check-bold text-sm me-1"></i>
+                  <small>{% trans "4:42pm" %}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-end text-right mb-4">
+          <div class="col-auto">
+            <div class="card bg-gray-200">
+              <div class="card-body py-2 px-3">
+                <p class="mb-1">{% trans "You’re welcome. Take care!" %}</p>
+                <div class="d-flex align-items-center justify-content-end text-sm opacity-6">
+                  <i class="ni ni-check-bold text-sm me-1"></i>
+                  <small>{% trans "4:42pm" %}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer d-block">
+        <form class="align-items-center">
+          <div class="d-flex">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Type here" aria-label="Message example input" onfocus="focused(this)" onfocusout="defocused(this)">
+            </div>
+            <button class="btn bg-gradient-primary mb-0 ms-2">
+              <i class="ni ni-send"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

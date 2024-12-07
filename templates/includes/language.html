@@ -1,0 +1,38 @@
+language toggle.html
+       
+ <form action="{% url 'app:set_language' %}" method="post">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ request.path }}">
+            <select name="language">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                        {{ language.name_local }} ({{ language.code }})
+                    </option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Go">
+        </form>
+
+        <div class="menu-overlay"></div>         
+        <div class="menu"> 
+            <div class="hamburger-menu-wrapper"> 
+                <button class="hamburger-menu"> <span>toggle menu</span> 
+                </button>                 
+            </div>             
+            <div class="menu-list"> 
+                <form action="{% url 'app:set_language' %}" method="post" id="language-form">
+                    {% csrf_token %}
+                <button type="submit" class="flag-button" name="language" value="en">
+                    <img src="https://hatscripts.github.io/circle-flags/flags/gb.svg" width="28" alt="{% trans "English" %}">
+                </button>
+                <button type="submit" class="flag-button" name="language" value="ar">
+                    <img src="https://hatscripts.github.io/circle-flags/flags/dz.svg" width="28" alt="{% trans "Arabic" %}">
+                </button>
+                <br> <a href="#">Link 3</a>
+                <br> <a href="#">Link 4</a>
+                <br> 
+            </div>             
+        </div>     

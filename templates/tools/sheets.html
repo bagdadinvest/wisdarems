@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handsontable with Toolbar (Empty Grid)</title>
+
+    <!-- Handsontable CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable@latest/dist/handsontable.full.min.css">
+
+    <!-- Handsontable JS -->
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@latest/dist/handsontable.full.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Toolbar styling */
+        .toolbar {
+            background-color: #f1f1f1;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .toolbar button {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .toolbar button:hover {
+            background-color: #ddd;
+        }
+
+        .handsontable-container {
+            margin: 20px auto;
+            width: 90%;
+        }
+
+        #hot {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Custom Toolbar -->
+    <div class="toolbar">
+        <button onclick="applyBold()">Bold</button>
+        <button onclick="applyItalic()">Italic</button>
+        <button onclick="increaseFontSize()">Increase Font Size</button>
+        <button onclick="decreaseFontSize()">Decrease Font Size</button>
+        <button onclick="applyBackground()">Background Color</button>
+    </div>
+
+    <!-- Handsontable container -->
+    <div class="handsontable-container">
+        <div id="hot"></div>
+    </div>
+
+    <script>
+        let hotInstance;
+
+        // Initialize Handsontable with an empty grid
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById('hot');
+
+            hotInstance = new Handsontable(container, {
+                data: Handsontable.helper.createEmptySpreadsheetData(10, 6), // Initialize with 100 rows and 26 empty columns
+                colHeaders: true,
+                rowHeaders: true,
+                contextMenu: true,
+                stretchH: 'all',
+                licenseKey: 'non-commercial-and-evaluation', // Free license for non-commercial use
+            });
+        });
+
+        // Toolbar functions
+        function applyBold() {
+            hotInstance.getSelectedRange().forEach(range => {
+                for (let row = range.from.row; row <= range.to.row; row++) {
+                    for (let col = range.from.col; col <= range.to.col; col++) {
+                        const cellMeta = hotInstance.getCellMeta(row, col);
+                        cellMeta.className = 'htBold';
+                        hotInstance.setCellMetaObject(row, col, cellMeta);
+                    }
+                }
+            });
+            hotInstance.render(); // Refresh grid to apply styles
+        }
+
+        function applyItalic() {
+            hotInstance.getSelectedRange().forEach(range => {
+                for (let row = range.from.row; row <= range.to.row; row++) {
+                    for (let col = range.from.col; col <= range.to.col; col++) {
+                        const cellMeta = hotInstance.getCellMeta(row, col);
+                        cellMeta.className = 'htItalic';
+                        hotInstance.setCellMetaObject(row, col, cellMeta);
+                    }
+                }
+            });
+            hotInstance.render(); // Refresh grid to apply styles
+        }
+
+        function increaseFontSize() {
+            hotInstance.getSelectedRange().forEach(range => {
+                for (let row = range.from.row; row <= range.to.row; row++) {
+                    for (let col = range.from.col; col <= range.to.col; col++) {
+                        const cellMeta = hotInstance.getCellMeta(row, col);
+                        cellMeta.className = 'htFontSizeLarge';
+                        hotInstance.setCellMetaObject(row, col, cellMeta);
+                    }
+                }
+            });
+            hotInstance.render();
+        }
+
+        function decreaseFontSize() {
+            hotInstance.getSelectedRange().forEach(range => {
+                for (let row = range.from.row; row <= range.to.row; row++) {
+                    for (let col = range.from.col; col <= range.to.col; col++) {
+                        const cellMeta = hotInstance.getCellMeta(row, col);
+                        cellMeta.className = 'htFontSizeSmall';
+                        hotInstance.setCellMetaObject(row, col, cellMeta);
+                    }
+                }
+            });
+            hotInstance.render();
+        }
+
+        function applyBackground() {
+            hotInstance.getSelectedRange().forEach(range => {
+                for (let row = range.from.row; row <= range.to.row; row++) {
+                    for (let col = range.from.col; col <= range.to.col; col++) {
+                        const cellMeta = hotInstance.getCellMeta(row, col);
+                        cellMeta.className = 'htBackgroundYellow';
+                        hotInstance.setCellMetaObject(row, col, cellMeta);
+                    }
+                }
+            });
+            hotInstance.render(); // Refresh grid to apply styles
+        }
+    </script>
+
+    <!-- Custom CSS for cell styling -->
+    <style>
+        .htBold {
+            font-weight: bold;
+        }
+
+        .htItalic {
+            font-style: italic;
+        }
+
+        .htFontSizeLarge {
+            font-size: 16px;
+        }
+
+        .htFontSizeSmall {
+            font-size: 10px;
+        }
+
+        .htBackgroundYellow {
+            background-color: yellow;
+        }
+    </style>
+</body>
+</html>

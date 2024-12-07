@@ -1,0 +1,236 @@
+{% extends 'layouts/base-fullscreen.html' %}
+{% load static i18n %}
+{% block title %}virtual-reality{% endblock %}
+
+{% block stylesheets %}
+<!-- Shepherd.js CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shepherd.js/dist/css/shepherd.css">
+{% endblock stylesheets %}
+
+{% block content %}
+{% include "includes/navigation-fullscreen.html" %}
+<main class="main-content mt-1 border-radius-lg" style="background-image: url('{% static 'assets/img/vr-bg.jpg' %}'); background-size: cover;">
+    <div class="section min-vh-85 position-relative transform-scale-0 transform-scale-md-7">
+        <div>
+            <div class="container">
+                <div class="row pt-10">
+                    <div class="col-lg-1 col-md-1 pt-5 pt-lg-0 ms-lg-5 text-center" data-step="1">
+                        <a href="javascript:;" class="avatar avatar-md border-0 d-block mb-2" data-bs-toggle="tooltip" data-bs-placement="left" title="{% trans 'My Profile' %}">
+                            <img class="border-radius-lg" alt="{% trans 'Image placeholder' %}" src="{% static 'assets/img/team-1.jpg' %}">
+                        </a>
+                        <button class="btn btn-white border-radius-lg p-2 mt-0 mt-md-2 d-block mx-2 mx-md-0" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="{% trans 'Home' %}">
+                            <i class="fas fa-home p-2"></i>
+                        </button>
+                        <button class="btn btn-white border-radius-lg p-2 d-block" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="{% trans 'Search' %}">
+                            <i class="fas fa-search p-2"></i>
+                        </button>
+                        <button class="btn btn-white border-radius-lg p-2 d-block ms-2 ms-md-0" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="{% trans 'Minimize' %}">
+                            <i class="fas fa-ellipsis-h p-2"></i>
+                        </button>
+                    </div>
+                    <div class="col-lg-8 col-md-11" data-step="2">
+                        <div class="d-flex">
+                            <div class="me-auto">
+                                <h1 class="display-1 text-white font-weight-bold mb-0">{% trans "12°C" %}</h1>
+                                <h6 class="text-uppercase text-white mb-0 ms-1">{% trans "Cloudy" %}</h6>
+                            </div>
+                            <div class="ms-auto">
+                                <img class="w-50 float-end mt-md-n5" src="{% static 'assets/img/small-logos/icon-sun-cloud.png' %}" alt="{% trans 'image sun' %}">
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-4 col-md-4" data-step="3">
+                                <div class="card move-on-hover overflow-hidden">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <h6 class="mb-0 me-3">{% trans "08:00" %}</h6>
+                                            <h6 class="mb-0">{% trans "Payment to Clinic" %}<small class="text-secondary font-weight-normal">{% trans "$150" %}</small>
+                                            </h6>
+                                        </div>
+                                        <hr class="horizontal dark">
+                                        <div class="d-flex">
+                                            <h6 class="mb-0 me-3">{% trans "09:30" %}</h6>
+                                            <h6 class="mb-0">{% trans "Payment to Driver" %}<br />
+                                                <small class="text-secondary font-weight-normal">{% trans "$80" %}</small>
+                                            </h6>
+                                        </div>
+                                        <hr class="horizontal dark">
+                                        <div class="d-flex">
+                                            <h6 class="mb-0 me-3">{% trans "11:00" %}</h6>
+                                            <h6 class="mb-0">{% trans "Payment to Hotel" %}<br />
+                                                <small class="text-secondary font-weight-normal">{% trans "$200" %}</small>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:;" class="bg-gray-100 w-100 text-center py-1" data-bs-toggle="tooltip" data-bs-placement="top" title="{% trans 'Show More' %}">
+                                        <i class="fas fa-chevron-down text-primary"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 mt-4 mt-sm-0" data-step="4">
+                                <div class="card bg-gradient-dark move-on-hover">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <h6 class="mb-0 text-white">{% trans "my Referral" %}</h6>
+                                            <div class="ms-auto">
+                                                <h1 class="text-white text-end mb-0 mt-n2">{% trans "$300" %}</h1>
+                                                <p class="text-sm mb-0 text-white">{% trans "Total Earned" %}</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-white mb-0">{% trans "Last Month: $100" %}</p>
+                                        <p class="mb-0 text-white">{% trans "This Month: $200" %}</p>
+                                    </div>
+                                    <a href="javascript:;" class="w-100 text-center py-1" data-bs-toggle="tooltip" data-bs-placement="top" title="{% trans 'Show More' %}">
+                                        <i class="fas fa-chevron-down text-white"></i>
+                                    </a>
+                                </div>
+                                <div class="card move-on-hover mt-4">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <p class="mb-0">{% trans "Messages (21)" %}</p>
+                                            <a href="javascript:;" class="ms-auto" data-bs-toggle="tooltip" data-bs-placement="top" title="{% trans 'Check your messages' %}">{% trans "Check" %}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 mt-4 mt-sm-0" data-step="5">
+                                <div class="card card-background card-background-mask-primary move-on-hover align-items-start">
+                                    <div class="cursor-pointer">
+                                        <div class="full-background" style="background-image: url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2370&q=80')"></div>
+                                        <div class="card-body">
+                                            <h5 class="text-white mb-0">{% trans "Some Kind Of Blues" %}</h5>
+                                            <p class="text-white text-sm">{% trans "Deftones" %}</p>
+                                            <div class="d-flex mt-5">
+                                                <button class="btn btn-outline-white rounded-circle p-2 mb-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="{% trans 'Prev' %}">
+                                                    <i class="fas fa-backward p-2"></i>
+                                                </button>
+                                                <button class="btn btn-outline-white rounded-circle p-2 mx-2 mb-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="{% trans 'Pause' %}">
+                                                    <i class="fas fa-play p-2"></i>
+                                                </button>
+                                                <button class="btn btn-outline-white rounded-circle p-2 mb-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="{% trans 'Next' %}">
+                                                    <i class="fas fa-forward p-2"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card move-on-hover mt-4 mb-4 mb-md-0 mt-md-4">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <p class="my-auto">{% trans "Messages" %}</p>
+                                            <div class="ms-auto">
+                                                <div class="avatar-group">
+                                                    <a href="javascript:;" class="avatar avatar-sm border-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="{% trans '2 New Messages' %}">
+                                                        <img alt="{% trans 'Image placeholder' %}" src="{% static 'assets/img/team-1.jpg' %}">
+                                                    </a>
+                                                    <a href="javascript:;" class="avatar avatar-sm border-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="{% trans '1 New Message' %}">
+                                                        <img alt="{% trans 'Image placeholder' %}" src="{% static 'assets/img/team-2.jpg' %}">
+                                                    </a>
+                                                    <a href="javascript:;" class="avatar avatar-sm border-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="{% trans '13 New Messages' %}">
+                                                        <img alt="{% trans 'Image placeholder' %}" src="{% static 'assets/img/team-3.jpg' %}">
+                                                    </a>
+                                                    <a href="javascript:;" class="avatar avatar-sm border-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="{% trans '7 New Messages' %}">
+                                                        <img alt="{% trans 'Image placeholder' %}" src="{% static 'assets/img/team-4.jpg' %}">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Shepherd.js JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/shepherd.js@9.1.1/dist/js/shepherd.min.js"></script>
+
+<script>
+// Initialize the Shepherd.js tour
+const tour = new Shepherd.Tour({
+  useModalOverlay: true
+});
+
+tour.addStep({
+  id: 'step-1',
+  text: '{% trans "This is where you can access your profile, home, search, and more." %}',
+  attachTo: {
+    element: '[data-step="1"]',
+    on: 'right'
+  },
+  buttons: [
+    {
+      text: '{% trans "Next" %}',
+      action: tour.next
+    }
+  ]
+});
+
+tour.addStep({
+  id: 'step-2',
+  text: '{% trans "This section displays the current weather and temperature." %}',
+  attachTo: {
+    element: '[data-step="2"]',
+    on: 'bottom'
+  },
+  buttons: [
+    {
+      text: '{% trans "Next" %}',
+      action: tour.next
+    }
+  ]
+});
+
+tour.addStep({
+  id: 'step-3',
+  text: '{% trans "Here you can view your upcoming payments." %}',
+  attachTo: {
+    element: '[data-step="3"]',
+    on: 'left'
+  },
+  buttons: [
+    {
+      text: '{% trans "Next" %}',
+      action: tour.next
+    }
+  ]
+});
+
+tour.addStep({
+  id: 'step-4',
+  text: '{% trans "This card shows your referral earnings." %}',
+  attachTo: {
+    element: '[data-step="4"]',
+    on: 'left'
+  },
+  buttons: [
+    {
+      text: '{% trans "Next" %}',
+      action: tour.next
+    }
+  ]
+});
+
+tour.addStep({
+  id: 'step-5',
+  text: '{% trans "Check your messages and see who has contacted you recently." %}',
+  attachTo: {
+    element: '[data-step="5"]',
+    on: 'left'
+  },
+  buttons: [
+    {
+      text: '{% trans "Done" %}',
+      action: tour.complete
+    }
+  ]
+});
+
+// Start the tour on button click or automatically
+tour.start();
+</script>
+{% endblock %}

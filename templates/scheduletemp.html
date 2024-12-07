@@ -1,0 +1,327 @@
+{% extends 'layouts/dashbase.html' %}
+{% load static i18n %}
+{% block title %}WISDAR | Schedule{% endblock %}
+{% block stylesheets %}
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css" rel="stylesheet">
+
+    <style>
+        /* Change the text color inside the calendar for event titles */
+        .fc-event-title {
+            color: blue !important;
+        }
+    
+        /* Change the text color of day numbers in the calendar */
+        .fc-daygrid-day-number {
+            color: blue;
+        }
+    
+        /* Change the color of the month title */
+        .fc-toolbar-title {
+            color: blue;
+        }
+    
+        /* Change the color of the weekday names (e.g., Mon, Tue) */
+        .fc-col-header-cell-cushion {
+            color: blue;
+        }
+    
+        /* Change the color of the event time */
+        .fc-event-time {
+            color: blue !important;
+        }
+    </style>
+    
+{% endblock stylesheets %}
+{% block content %}
+    <div class="row mb-lg-7">
+        <div class="col-12 ms-auto">
+            <div class="d-flex mb-4">
+                <div class="pe-4 mt-1 position-relative ms-auto">
+                    <p class="text-white text-xs font-weight-bold mb-2">{% trans "Team members:" %}</p>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <div class="avatar-group">
+                            <a href="javascript:;" class="avatar avatar-sm rounded-circle" data-bs-toggle="tooltip" title="{% trans "Dr. Jessica Rowland" %}">
+                                <img alt="Image placeholder" src="{% static 'assets/img/team-1.jpg' %}">
+                            </a>
+                            <a href="javascript:;" class="avatar avatar-sm rounded-circle" data-bs-toggle="tooltip" title="{% trans "Dr. Audrey Love" %}">
+                                <img alt="Image placeholder" src="{% static 'assets/img/team-2.jpg' %}" class="rounded-circle">
+                            </a>
+                            <a href="javascript:;" class="avatar avatar-sm rounded-circle" data-bs-toggle="tooltip" title="{% trans "Dr. Michael Lewis" %}">
+                                <img alt="Image placeholder" src="{% static 'assets/img/team-3.jpg' %}" class="rounded-circle">
+                            </a>
+                            <a href="javascript:;" class="avatar avatar-sm rounded-circle" data-bs-toggle="tooltip" title="{% trans "Dr. Lucia Linda" %}">
+                                <img alt="Image placeholder" src="{% static 'assets/img/team-4.jpg' %}" class="rounded-circle">
+                            </a>
+                        </div>
+                    </div>
+                    <hr class="vertical light mt-0">
+                </div>
+                <div class="ps-4">
+                    <button class="btn btn-outline-white btn-icon-only mb-0 mt-3 py-0" data-bs-toggle="modal" data-bs-target="#new-board-modal">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-9">
+            <div class="card card-calendar">
+                <div class="card-body p-3">
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="row">
+                <div class="col-xl-12 col-md-6 mt-xl-0 mt-4">
+                    <div class="card">
+                        <div class="card-header p-3 pb-0">
+                            <h6 class="mb-0">{% trans "Next events" %}</h6>
+                        </div>
+                        <div class="card-body border-radius-lg p-3">
+                            <!-- Event items -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-6 mt-4">
+                    <div class="card bg-gradient-dark">
+                        <div class="card-header bg-transparent p-3 pb-0">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h6 class="text-white mb-0">{% trans "Productivity" %}</h6>
+                                    <p class="text-sm text-white">
+                                        <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
+                                        <span class="font-weight-bold">4% more</span> {% trans "in 2024" %}
+                                    </p>
+                                </div>
+                                <div class="col-5 text-end">
+                                    <div class="dropdown me-3">
+                                        <a class="cursor-pointer" href="javascript:;" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false" role="button">
+                                            <i class="fa fa-ellipsis-h text-white" aria-hidden="true"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end ms-n5 px-2 py-3" aria-labelledby="dropdownTable" data-popper-placement="bottom-start">
+                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">{% trans "Action" %}</a></li>
+                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">{% trans "Another action" %}</a></li>
+                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">{% trans "Something else here" %}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="chart">
+                                <canvas id="chart-line-1" class="chart-canvas" height="100"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Tutorial Button -->
+    <div class="text-center mt-5">
+        <button id="start-tutorial" class="btn btn-lg btn-info">Start Tutorial</button>
+    </div>
+
+
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("DOM content loaded, initializing calendar...");
+    
+            var calendarEl = document.getElementById('calendar');
+            var baseEvents = {{ events|safe }};  // The original 5-day events for one week
+    
+            // Function to generate events for each week of the year
+            function expandEventsForYear(events) {
+                let expandedEvents = [];
+                let currentDate = new Date();  // Start from today's date
+                let currentYear = currentDate.getFullYear();
+                let firstDayOfYear = new Date(currentYear, 0, 1);  // Jan 1 of the current year
+    
+                // Get the start of the first week (Monday of the first week of the year)
+                let startOfWeek = new Date(firstDayOfYear);
+                startOfWeek.setDate(firstDayOfYear.getDate() - firstDayOfYear.getDay() + 1);  // Adjust to Monday
+    
+                // Loop through every week of the year
+                for (let week = 0; week < 52; week++) {
+                    events.forEach(event => {
+                        let eventStart = new Date(startOfWeek);  // Clone start of the week
+                        let eventEnd = new Date(startOfWeek);    // Clone start of the week for the end time
+                        
+                        // Parse the original event times (hours and minutes)
+                        let [startHours, startMinutes] = event.start.split('T')[1].split(':').map(Number);
+                        let [endHours, endMinutes] = event.end.split('T')[1].split(':').map(Number);
+    
+                        // Adjust eventStart and eventEnd to correct times for each day
+                        eventStart.setDate(startOfWeek.getDate() + (new Date(event.start).getDay() - 1));  // Day offset
+                        eventEnd.setDate(startOfWeek.getDate() + (new Date(event.end).getDay() - 1));      // Day offset
+                        eventStart.setHours(startHours, startMinutes);
+                        eventEnd.setHours(endHours, endMinutes);
+    
+                        expandedEvents.push({
+                            title: event.title,
+                            start: eventStart.toISOString(),
+                            end: eventEnd.toISOString(),
+                            backgroundColor: event.backgroundColor || '#3788d8',  // Default color
+                        });
+                    });
+    
+                    // Move to the next week
+                    startOfWeek.setDate(startOfWeek.getDate() + 7);
+                }
+    
+                return expandedEvents;
+            }
+    
+            // Expand the events for the entire year
+            var expandedEvents = expandEventsForYear(baseEvents);
+    
+            // Initialize the calendar
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',  // Set to display a month view by default
+                headerToolbar: {
+                    start: 'prev,next today',
+                    center: 'title',
+                    end: 'dayGridMonth,timeGridWeek,dayGridWeek'
+                },
+                events: expandedEvents,  // Load the expanded events
+    
+                eventMouseEnter: function(info) {
+                    // Create a tooltip showing the hypothetical attendance data
+                    var tooltipContent = '';
+    
+                    var eventDate = new Date(info.event.start);
+                    var today = new Date();
+                    
+                    if (eventDate < today) {
+                        // Hypothetical attendance data for past days
+                        tooltipContent = `<strong>Attendance:</strong><br>8 hours 30 minutes`;
+                    } else if (eventDate > today) {
+                        // Future days, show the "Ask for Permission" button
+                        tooltipContent = `<button onclick="alert('Request permission clicked!')">Ask for Permission</button>`;
+                    } else {
+                        tooltipContent = `<strong>Today:</strong><br>Attendance will be recorded.`;
+                    }
+    
+                    var tooltip = new bootstrap.Tooltip(info.el, {
+                        title: tooltipContent,
+                        html: true,
+                        placement: 'top',
+                        trigger: 'hover',
+                    });
+    
+                    tooltip.show();
+                },
+    
+                eventClick: function(info) {
+                    // Show a modal or alert on event click with similar content
+                    var eventDate = new Date(info.event.start);
+                    var today = new Date();
+                    
+                    var modalContent = '';
+    
+                    if (eventDate < today) {
+                        // Hypothetical attendance data for past days
+                        modalContent = `<strong>Attendance:</strong><br>8 hours 30 minutes`;
+                    } else if (eventDate > today) {
+                        // Future days, show the "Ask for Permission" button
+                        modalContent = `<button onclick="alert('Request permission clicked!')">Ask for Permission</button>`;
+                    } else {
+                        modalContent = `<strong>Today:</strong><br>Attendance will be recorded.`;
+                    }
+    
+                    var modal = new bootstrap.Modal(document.getElementById('eventModal'));
+                    document.getElementById('modal-body').innerHTML = modalContent;
+                    modal.show();
+                }
+            });
+    
+            calendar.render();
+            console.log("Calendar rendered successfully with yearly events.");
+        });
+    </script>
+    
+    <!-- Modal Structure -->
+    <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Event Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Dynamic content will be injected here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Shepherd.js tour
+            const tour = new Shepherd.Tour({
+                defaultStepOptions: {
+                    scrollTo: true,
+                    cancelIcon: {
+                        enabled: true
+                    },
+                    classes: 'shepherd-theme-arrows',
+                    useModalOverlay: true
+                }
+            });
+    
+            // Step 1: Start with team members
+            tour.addStep({
+                id: 'team-members',
+                text: 'Here you can see the team members working on this project.',
+                attachTo: { element: '.avatar-group', on: 'bottom' },
+                buttons: [
+                    {
+                        text: 'Next',
+                        action: tour.next
+                    }
+                ]
+            });
+    
+            // Step 2: Highlight calendar
+            tour.addStep({
+                id: 'calendar',
+                text: 'This is the calendar where you can see all scheduled events.',
+                attachTo: { element: '#calendar', on: 'top' },
+                buttons: [
+                    {
+                        text: 'Next',
+                        action: tour.next
+                    }
+                ]
+            });
+    
+            // Step 3: Highlight "Next events"
+            tour.addStep({
+                id: 'next-events',
+                text: 'Here you can see the upcoming events.',
+                attachTo: { element: '.card-header h6', on: 'bottom' },
+                buttons: [
+                    {
+                        text: 'Finish',
+                        action: tour.complete
+                    }
+                ]
+            });
+    
+            // Start the tour when the button is clicked
+            document.getElementById('start-tutorial').addEventListener('click', function() {
+                tour.start();
+            });
+        });
+    </script>
+    
+{% endblock javascripts %}
+
+{% endblock content %}

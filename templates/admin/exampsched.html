@@ -1,0 +1,119 @@
+{% extends 'layouts/dashbase.html' %}
+{% load static i18n %}
+{% block title %}WISDAR | FullCalendar Draggable Events Demo{% endblock %}
+{% block stylesheets %}
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@5.10.2/main.min.js"></script>
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
+    <style>
+        /* External events container */
+        #external-events {
+          padding: 10px;
+          width: 150px;
+          background: #f4f4f4;
+          border: 1px solid #ccc;
+          margin-bottom: 10px;
+        }
+    
+        /* Styling the draggable events with individual colors */
+        .fc-event {
+          margin: 10px 0;
+          cursor: pointer;
+          padding: 5px;
+          color: white;
+          border-radius: 3px;
+          rou
+        }
+    
+        .fc-event.meeting {
+          background-color: #1f77b4; /* Blue */
+        }
+    
+        .fc-event.lunch {
+          background-color: #ff7f0e; /* Orange */
+        }
+    
+        .fc-event.conference {
+          background-color: #2ca02c; /* Green */
+        }
+    
+        .fc-event.workshop {
+          background-color: #d62728; /* Red */
+        }
+    
+        #calendar {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+      </style>
+    
+{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="row mb-lg-7">
+        <div class="col-xl-9">
+            <div class="card card-calendar">
+                <div class="card-body p-3">
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="row">
+                <div class="col-xl-12 col-md-6 mt-xl-0 mt-4">
+                    <div class="card">
+                        <div class="card-header p-3 pb-0"> 
+                            <div id="external-events">
+                            <h6 class="mb-0">{% trans "Draggable Events" %}</h6>
+                            <div class="fc-event meeting" data-event='{"title":"Meeting"}'>Meeting</div>
+                            <div class="fc-event lunch" data-event='{"title":"Lunch"}'>Lunch</div>
+                            <div class="fc-event conference" data-event='{"title":"Conference"}'>Conference</div>
+                            <div class="fc-event workshop" data-event='{"title":"Workshop"}'>Workshop</div>
+                                                      </div>                 
+                </div>
+            </div>
+
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  var containerEl = document.getElementById('external-events');
+                  var calendarEl = document.getElementById('calendar');
+            
+                  // Initialize draggable external events
+                  new FullCalendar.Draggable(containerEl, {
+                    itemSelector: '.fc-event',
+                    eventData: function(eventEl) {
+                      return JSON.parse(eventEl.dataset.event);
+                    }
+                  });
+            
+                  // Initialize FullCalendar
+                  var calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    editable: true,  // Allows dragging and resizing of calendar events
+                    droppable: true, // Allows external elements to be dropped onto the calendar
+                    headerToolbar: {
+                      start: 'prev,next today',
+                      center: 'title',
+                      end: 'dayGridMonth,timeGridWeek,timeGridDay'
+                    },
+                    eventReceive: function(event) {
+                      console.log('Event added: ', event);
+                    },
+                    events: [
+                      {
+                        title: 'Existing Event',
+                        start: '2024-09-15',
+                        color: '#e377c2' // Example color for an existing event
+                      }
+                    ]
+                  });
+            
+                  calendar.render();
+                });
+              </script>
+            
+
+   {% endblock content %}

@@ -1,0 +1,261 @@
+{% extends 'layouts/dashbase.html' %}
+{% load static i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Home" %}{% endblock %}
+{% block stylesheets %}
+<style>
+    @media (max-width: 467px) {
+        #accounts {
+            display: none;
+        }
+    }
+</style>
+<!-- Shepherd.js CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shepherd.js/dist/css/shepherd.css">
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="container-fluid my-4 py-2">
+    <div class="row mb-5">
+        <div class="col-lg-3">
+            <div class="card position-sticky top-1">
+                <ul class="nav flex-column bg-white border-radius-lg p-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-body d-flex align-items-center" data-scroll="" href="#profile">
+                            <i class="ni ni-spaceship me-2 text-dark opacity-6"></i>
+                            <span class="text-sm">{% trans "Profile" %}</span>
+                        </a>
+                    </li>
+                    <li class="nav-item pt-2">
+                        <a class="nav-link text-body d-flex align-items-center" data-scroll="" href="#uploadForm">
+                            <i class="ni ni-cloud-upload-96 me-2 text-dark opacity-6"></i>
+                            <span class="text-sm">{% trans "Upload Files" %}</span>
+                        </a>
+                    </li>
+                    <!-- Other sections omitted for brevity -->
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-9 mt-lg-0 mt-4">
+            <div class="card card-body" id="profile" data-step="2">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-sm-auto col-4">
+                        <div class="avatar avatar-xl position-relative">
+                            {% if profile_picture %}
+                                <img src="{{ profile_picture.file.url }}" alt="{% trans 'Profile Picture' %}" class="w-100 border-radius-lg shadow-sm">
+                            {% else %}
+                                <img src="{% static 'default.jpg' %}" alt="{% trans 'Default Profile Picture' %}" class="w-100 border-radius-lg shadow-sm">
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-sm-auto col-8 my-auto">
+                        <div class="h-100">
+                            <h5 class="mb-1 font-weight-bolder">
+                                {{ employee.first_name }} {{ employee.last_name }}
+                            </h5>
+                            <p class="mb-0 font-weight-bold text-sm">
+                                {% trans "Joined on" %} {{ employee.date_joined|date:"F j, Y" }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Injecting Profile Update Form -->
+            <div class="card mt-4" id="basic-info" data-step="3">
+                <div class="card-header d-flex">
+                    <h5 class="mb-0">{% trans "Basic Info" %}</h5>
+                    <span class="badge badge-success ms-auto">{% trans "Enabled" %}</span>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ profile_form|crispy }}
+                        <button type="submit" class="btn btn-primary">{% trans "Submit" %}</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Injecting File Upload Form -->
+            <div class="card mt-4" id="uploadForm" data-step="4">
+                <div class="card-header d-flex">
+                    <h5>{% trans "Upload Files" %}</h5>
+                    <span class="badge badge-success ms-auto">{% trans "Enabled" %}</span>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="{% url 'employee:employee_file_upload' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ file_form.as_p }}
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary">{% trans "Upload File" %}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Previously uploaded files -->
+            <div class="card mt-4">
+                <div class="card-header d-flex">
+                    <h5>{% trans "Previously Uploaded Files" %}</h5>
+                    <span class="badge badge-success ms-auto">{% trans "Enabled" %}</span>
+                </div>
+                <div class="card-body">
+                    {% if uploaded_files %}
+                    <ul class="list-group">
+                        {% for file in uploaded_files %}
+                            <li class="list-group-item">
+                                <a href="{{ file.file.url }}" target="_blank">{{ file.file.name|slice:"9:" }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    {% else %}
+                    <p>{% trans "No files have been uploaded yet." %}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Additional scripts like Shepherd.js, AJAX submission, etc., retained -->
+
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/shepherd.js/dist/js/shepherd.min.js"></script>
+{% block extrajavascripts %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Check if the tutorial should be shown
+        var showTutorial = {{ show_tutorial|yesno:"true,false" }};
+
+        if (showTutorial) {
+            // Initialize the Shepherd tutorial
+            var tour = new Shepherd.Tour({
+                defaults: {
+                    classes: 'shepherd-theme-arrows',
+                    scrollTo: true
+                }
+            });
+
+            // Step 1: Welcome
+            tour.addStep({
+                id: 'step-welcome',
+                text: 'Welcome to your profile page! Let us guide you through the important features.',
+                attachTo: { element: '#profile', on: 'bottom' },
+                buttons: [
+                    {
+                        text: 'Next',
+                        action: tour.next
+                    }
+                ]
+            });
+
+            // Step 2: Profile Information
+            tour.addStep({
+                id: 'step-profile-info',
+                text: 'Here you can see and update your profile information.',
+                attachTo: { element: '#basic-info', on: 'top' },
+                buttons: [
+                    {
+                        text: 'Next',
+                        action: tour.next
+                    }
+                ]
+            });
+
+            // Step 3: File Upload
+            tour.addStep({
+                id: 'step-file-upload',
+                text: 'You can upload your documents here.',
+                attachTo: { element: '#uploadForm', on: 'top' },
+                buttons: [
+                    {
+                        text: 'Next',
+                        action: tour.next
+                    }
+                ]
+            });
+
+            // Step 4: Previously Uploaded Files
+            tour.addStep({
+                id: 'step-uploaded-files',
+                text: 'Here you can access the files you have uploaded before.',
+                attachTo: { element: '.card-body ul', on: 'top' },
+                buttons: [
+                    {
+                        text: 'Finish',
+                        action: tour.complete
+                    }
+                ]
+            });
+
+            // Start the tour
+            tour.start();
+        }
+    });
+</script>
+<script>
+// Function to retrieve the CSRF token from cookies
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+$(document).ready(function() {
+    // Set up CSRF token for AJAX requests
+    $.ajaxSetup({
+        headers: {
+            "X-CSRFToken": getCookie("csrftoken") // Add the CSRF token to the headers
+        }
+    });
+
+$('#uploadForm form').on('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    var formData = new FormData(this); // Use FormData to handle file uploads
+
+    $.ajax({
+        url: $(this).attr('action'),  // Form action URL
+        type: 'POST',
+        data: formData,  // Pass the form data
+        processData: false,  // Don't process the files
+        contentType: false,  // Set content type to false for file upload
+        success: function(response) {
+            $('#modal-title-notification').text('Success');
+            $('#modal-message').text('File uploaded successfully.');
+            $('#modal-notification').modal('show');
+        },
+        error: function(response) {
+            let errorMessage = 'There was an error uploading the file.';
+
+            // Check if the server returned specific errors
+            if (response.responseJSON && response.responseJSON.errors) {
+                errorMessage = 'Errors: ' + JSON.stringify(response.responseJSON.errors);
+            }
+
+            $('#modal-title-notification').text('Error');
+            $('#modal-message').text(errorMessage);
+            $('#modal-notification').modal('show');
+        }
+    });
+});
+
+</script>
+
+
+{% endblock extrajavascripts %}
+
+{% endblock %}

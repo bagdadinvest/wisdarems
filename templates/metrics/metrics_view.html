@@ -1,0 +1,106 @@
+{% extends 'layouts/dashbase.html' %}
+{% load static i18n %}
+{% block title %}{% trans "Command Execution" %}{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        #terminal {
+            background-color: black;
+            color: white;
+            font-family: monospace;
+            padding: 10px;
+            height: 400px;
+            overflow-y: scroll;
+            border: 1px solid #333;
+            white-space: pre-wrap; /* Ensures whitespace is preserved */
+        }
+        .command-item {
+            cursor: pointer;
+            color: #0d6efd;
+            margin-bottom: 10px;
+        }
+    </style>
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="container my-4 py-2">
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h1>{% trans "Predefined Commands Execution" %}</h1>
+        </div>
+        <div class="card-body">
+            <!-- Command Information Display -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h3>{% trans "Command Information" %}</h3>
+                </div>
+                <div class="card-body">
+                    <p><strong>{% trans "Name" %}:</strong> <span id="command-name">{% trans "Select a command" %}</span></p>
+                    <p><strong>{% trans "Definition" %}:</strong> <span id="command-definition">-</span></p>
+                    <p><strong>{% trans "Usage" %}:</strong> <span id="command-usage">-</span></p>
+                </div>
+            </div>
+
+            <!-- List of Commands -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h3>{% trans "Available Commands" %}</h3>
+                </div>
+                <div class="card-body">
+                    <div class="command-list">
+                        {% for command in commands %}
+                            <div class="command-item" data-command-id="{{ command.id }}" data-command-name="{{ command.name }}" data-command-definition="{{ command.definition }}" data-command-usage="{{ command.usage }}">
+                                {{ command.name }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <button id="runCommandButton" class="btn btn-primary mt-3" disabled>{% trans "Run Selected Command" %}</button>
+                </div>
+            </div>
+
+            <!-- Custom Command Execution -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h3>{% trans "Custom Command Execution" %}</h3>
+                </div>
+                <div class="card-body">
+                    <input type="text" id="customCommandInput" class="form-control mb-3" placeholder="{% trans "Enter your custom command" %}">
+                    <button id="runCustomCommandButton" class="btn btn-success">{% trans "Run Custom Command" %}</button>
+                </div>
+            </div>
+
+            <!-- Terminal-like div for showing live logs -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h3>{% trans "Live Command Output" %}</h3>
+                </div>
+                <div class="card-body">
+                    <div id="terminal" class="rounded"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Command Output DataTable -->
+    <div class="card">
+        <div class="card-header">
+            <h3>{% trans "Command Output" %}</h3>
+        </div>
+        <div class="card-body">
+            <table id="commandOutputTable" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>{% trans "Output" %}</th>
+                    </tr>
+                </thead>
+                <tbody id="commandOutput">
+                    <!-- Dynamic rows will be added here by DataTables -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Load JS from an external file -->
+<script src="{% static 'assets/js/metrics.js' %}"></script>
+{% endblock %}

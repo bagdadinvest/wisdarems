@@ -1,0 +1,81 @@
+{% extends 'layouts/base-fullscreen.html' %}
+{% load static i18n %}
+{% block title %} Login {% endblock title %}
+{% block stylesheets %}
+
+{% endblock stylesheets %}
+{% block content %}
+<!-- Page content -->
+<div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+        <div class="col-12"></div>
+    </div>
+</div>
+<main class="main-content mt-0">
+    <div class="page-header align-items-start min-vh-50 pt-7 pb-9 m-3 border-radius-lg" style="background-image: url({% static 'assets/img/bg1.jpg' %});">
+        <span class="mask bg-gradient-dark opacity-6"></span>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 text-center mx-auto">
+                    <h1 class="text-white mb-2 mt-5">{% trans "Wisdar" %}</h1>
+                    <p class="text-lead text-white">{% trans "Employee Management Portal " %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-lg-n10 mt-md-n11 mt-n10 justify-content-center">
+            <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
+                <div class="card">
+                    <div class="card-header pb-0 text-start">
+                        <h4 class="font-weight-bolder">{% trans "Sign In" %}</h4>
+                        <p class="mb-0">{% trans "Enter your email and password to access your UserSpace" %}</p>
+                    </div>
+                    <div class="card-body">
+                            </div>
+                            <div class="login-form d-flex justify-content-center align-items-center">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <div class="err_message mt-3">
+                                        {% for msg in messages %}
+                                            <div class="alert {% if 'success' in msg.tags %}alert-success{% else %}alert-danger{% endif %}" role="alert">
+                                                {{ msg }}
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <!-- Email field -->
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">{% trans "Email" %}</label>
+                                        <input type="email" name="email" class="form-control form-control-lg" placeholder="{% trans 'Enter your email' %}"  required>
+                                    </div>
+                        
+                                    <!-- Password field -->
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">{% trans "Password" %}</label>
+                                        <input type="password" name="password" class="form-control form-control-lg" placeholder="{% trans 'Enter your password' %}"  required>
+                                    </div>
+                        <hr>
+                                    <!-- Submit button -->
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg w-100">{% trans "Login" %}</button>
+                                    </div>
+                        
+                                    <!-- New Employee link -->                        
+                                    <!-- Error messages -->
+                              
+                                </form>
+                            </div>
+                        </div>        <div class="card-footer text-center pt-0 px-lg-2 px-1">
+            <p class="mb-4 text-sm mx-auto">{% trans "Don't have an account?" %}<a href="{% url 'accounts:signup' %}" class="text-primary text-gradient font-weight-bold">{% trans "Sign up!" %}</a>
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</main>
+
+{% endblock content %}
+{% block javascripts %}
+
+{% endblock javascripts %}

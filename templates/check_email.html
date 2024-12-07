@@ -1,0 +1,166 @@
+{% extends 'layouts/base-fullscreen.html' %}
+{% load static i18n %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block stylesheets %}
+<style>
+  /* Ensure the video takes up the full screen */
+  #welcome-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Set video on a lower layer */
+    transform: translateZ(0); /* Force video to be treated on a lower layer */
+    will-change: transform; /* Optimize for performance */
+  }
+
+  /* Hide the content initially */
+  .welcome-content {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+  }
+
+  /* Show the content when active */
+  .show-content .welcome-content {
+    opacity: 1;
+  }
+
+  /* Ensure the button and text are centered */
+  .content-container {
+    position: relative;
+    z-index: 10; /* Ensure content is above video */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+  }
+
+  /* Subtle futuristic glowing effect for text */
+  .futuristic-glow {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(0, 128, 255, 0.6);
+  }
+
+  .subtext {
+    font-size: 18px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+  }
+
+  /* Skip Button Styling */
+  #skip-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #skip-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  #skip-btn-icon {
+    margin-right: 10px;
+  }
+
+  /* Futuristic animation effect */
+  @keyframes pulse {
+    0% {
+      text-shadow: 0 0 10px rgba(0, 128, 255, 0.8), 0 0 20px rgba(0, 128, 255, 0.6);
+    }
+    50% {
+      text-shadow: 0 0 20px rgba(0, 128, 255, 0.9), 0 0 30px rgba(0, 128, 255, 0.7);
+    }
+    100% {
+      text-shadow: 0 0 10px rgba(0, 128, 255, 0.8), 0 0 20px rgba(0, 128, 255, 0.6);
+    }
+  }
+
+  .futuristic-glow {
+    animation: pulse 2s infinite;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Main Content -->
+<main class="main-content main-content-bg mt-0">
+    <!-- Fullscreen Video -->
+    <video id="welcome-video" width="100%" autoplay muted>
+        <source src="{% static 'assets/img/welcome.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content that fades in after video -->
+    <div class="container content-container welcome-content">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center py-5">
+                <h1 class="mb-2 mt-5 futuristic-glow">
+                    {% trans "Welcome, " %} {{ user.get_full_name }}!
+                </h1>
+                <p class="subtext">
+                    {% trans "Your account is under review by our admin team. In the meantime, feel free to explore the dashboard and discover the various features of the system." %}
+                </p>
+                <a href="{% url 'employee:profile' %}" class="btn btn-primary">
+                    {% trans "Explore Dashboard" %}
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skip Button -->
+    <button id="skip-btn" onclick="skipVideo()">
+        <span id="skip-btn-icon">⏭</span> Skip
+    </button>
+</main>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+    
+    var video = document.getElementById('welcome-video');
+    var body = document.body;
+
+    console.log('Video element found:', video);
+
+    // When the video ends, fade in the content
+    video.addEventListener('ended', function() {
+      console.log('Video ended');
+      body.classList.add('show-content');
+    });
+
+    // Function to skip the video and show content immediately
+    window.skipVideo = function() {
+      console.log('Skip button clicked');
+      video.pause(); // Stop the video
+      body.classList.add('show-content'); // Show the content
+      document.getElementById('skip-btn').style.display = 'none'; // Hide the skip button
+    };
+  });
+</script>
+
+<script src="{% static 'assets/js/core/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/core/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/perfect-scrollbar.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/smooth-scrollbar.min.js' %}"></script>
+{% endblock %}

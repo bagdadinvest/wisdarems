@@ -1,0 +1,14 @@
+{% load wagtailadmin_tags %}
+{% load static %}
+
+{% spaceless %}
+    {% if wordmark %}
+    <a class="navbar-brand m-0" href="{% url 'employee:dashboard' %}">
+        <img src="{% static 'assets/img/logo-ct-dark.png' %}" class="navbar-brand-img h-100" alt="Brand Logo">
+     </a>
+    {% else %}
+    <a class="navbar-brand m-0" href="{% url 'employee:dashboard' %}">
+        <img src="{% static 'assets/img/logo-ct-dark.png' %}" class="navbar-brand-img h-100" alt="Brand Logo">
+    </a>
+    {% endif %}
+{% endspaceless %}

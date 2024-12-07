@@ -1,0 +1,16 @@
+# Python bytecode files
+*.pyc
+__pycache__/
+
+# Django files
+db.sqlite3
+
+# Environment variables
+
+# IDE-specific files
+.vscode/
+.idea/
+venv/
+# OS-specific files
+.DS_Store
+Thumbs.db

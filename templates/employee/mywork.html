@@ -1,0 +1,119 @@
+{% extends 'layouts/dashbase.html' %}
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="card shadow-lg mx-4">
+        <div class="card-body p-3">
+            <div class="row gx-4">
+                <div class="col-auto">    
+                    <div class="card-header">
+                    <h1 class="text-center mb-4">Virtual Office Showcase: Tools You Can Build</h1>
+                </div>
+            </div>
+        </div>
+
+ 
+    </div>
+</div>
+    </div>
+    <!-- Cards for each example -->
+    <div class="row">
+        <!-- Example 1: Spreadsheet Clone -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3 class="card-title">Spreadsheet Clone</h3>
+                </div>
+                <div class="card-body">
+                    {% include 'tools/sheets.html' %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Example 2: Document Editor Clone -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3 class="card-title">Document Editor Clone</h3>
+                </div>
+                <div class="card-body">
+                    {% include 'tools/docs.html' %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Example 3: Form Builder -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3 class="card-title">Form Builder Example</h3>
+                </div>
+                <div class="card-body">
+                    {% include 'tools/form_builder.html' %}
+                </div>
+```html
+            </div>
+        </div>
+
+        <!-- Example 4: Code Editor -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3 class="card-title">Code Editor Example</h3>
+                </div>
+                <div class="card-body">
+                    {% include 'tools/code_editor.html' %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Example 5: Kanban Board -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3 class="card-title">Kanban Board Example</h3>
+                </div>
+                <div class="card-body">
+                    {% include 'tools/kanban.html' %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Example 6: Markdown Editor -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3 class="card-title">Markdown Editor Example</h3>
+                </div>
+                <div class="card-body">
+                    {% include 'tools/markdown_editor.html' %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Example 7: Interactive Charts -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3 class="card-title">Interactive Chart Example</h3>
+                </div>
+                <div class="card-body">
+                    {% include 'tools/charts.html' %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Example 8: Real-Time Chat -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3 class="card-title">Real-Time Chat Example</h3>
+                </div>
+                <div class="card-body">
+                    {% include 'tools/chat.html' %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

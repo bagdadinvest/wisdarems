@@ -1,0 +1,3190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-06 19:07+0300\n"
+"PO-Revision-Date: 2024-09-06 22:49+0300\n"
+"Last-Translator:   <sdgjs@mg.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: employee/models.py:20
+msgid "Executive and Management"
+msgstr "التنفيذية والإدارية"
+
+#: employee/models.py:21
+msgid "Human Resources Manager"
+msgstr "مدير الموارد البشرية"
+
+#: employee/models.py:22
+msgid "Administrative Officer"
+msgstr "موظف إداري"
+
+#: employee/models.py:23
+msgid "Chief Marketing Officer"
+msgstr "الرئيس التنفيذي للتسويق"
+
+#: employee/models.py:25
+msgid "Creative and Media"
+msgstr "الإبداع والإعلام"
+
+#: employee/models.py:26
+msgid "Journalist"
+msgstr "صحفي"
+
+#: employee/models.py:27
+msgid "Proofreader"
+msgstr "مدقق لغوي"
+
+#: employee/models.py:28
+msgid "Video Editor"
+msgstr "محرر الفيديو"
+
+#: employee/models.py:29
+msgid "Graphic Designer"
+msgstr "مصمم جرافيك"
+
+#: employee/models.py:30
+msgid "Content Writer"
+msgstr "كاتب محتوى"
+
+#: employee/models.py:31
+msgid "Voiceover Artist"
+msgstr "فنان التعليق الصوتي"
+
+#: employee/models.py:33
+msgid "Technical and IT"
+msgstr "التقنية وتكنولوجيا المعلومات"
+
+#: employee/models.py:34
+msgid "Software Developer"
+msgstr "مطور برامج"
+
+#: employee/models.py:35
+msgid "Authentication Supervisor"
+msgstr "مشرف المصادقة"
+
+#: employee/models.py:37
+msgid "Support and Coordination"
+msgstr "الدعم والتنسيق"
+
+#: employee/models.py:38
+msgid "Executive Secretary"
+msgstr "سكرتير تنفيذي"
+
+#: employee/models.py:39
+msgid "Logistics Coordinator"
+msgstr "منسق الخدمات اللوجستية"
+
+#: employee/models.py:40
+msgid "Project Coordinator"
+msgstr "منسق المشروع"
+
+#: employee/models.py:41
+msgid "Executive Assistant"
+msgstr "مساعد تنفيذي"
+
+#: employee/models.py:43
+msgid "Compliance and Quality Assurance"
+msgstr "الامتثال وضمان الجودة"
+
+#: employee/models.py:44
+msgid "Internal Auditor"
+msgstr "المدقق الداخلي"
+
+#: employee/models.py:46
+msgid "Maintenance and Facility"
+msgstr "الصيانة والمرافق"
+
+#: employee/models.py:47
+msgid "Janitorial Staff"
+msgstr "طاقم النظافة"
+
+#: employee/models.py:58
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:25
+#: venv/lib/python3.10/site-packages/tornado/locale.py:281
+msgid "January"
+msgstr "يناير"
+
+#: employee/models.py:58
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:26
+#: venv/lib/python3.10/site-packages/tornado/locale.py:282
+msgid "February"
+msgstr "فبراير"
+
+#: employee/models.py:58
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:27
+#: venv/lib/python3.10/site-packages/tornado/locale.py:283
+msgid "March"
+msgstr "مارس"
+
+#: employee/models.py:58
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:28
+#: venv/lib/python3.10/site-packages/tornado/locale.py:284
+msgid "April"
+msgstr "أبريل"
+
+#: employee/models.py:58
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:29
+#: venv/lib/python3.10/site-packages/tornado/locale.py:285
+msgid "May"
+msgstr "مايو"
+
+#: employee/models.py:58
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:30
+#: venv/lib/python3.10/site-packages/tornado/locale.py:286
+msgid "June"
+msgstr "يونيو"
+
+#: employee/models.py:58
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:31
+#: venv/lib/python3.10/site-packages/tornado/locale.py:287
+msgid "July"
+msgstr "يوليو"
+
+#: employee/models.py:58
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:32
+#: venv/lib/python3.10/site-packages/tornado/locale.py:288
+msgid "August"
+msgstr "أغسطس"
+
+#: employee/models.py:58
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:33
+#: venv/lib/python3.10/site-packages/tornado/locale.py:289
+msgid "September"
+msgstr "سبتمبر"
+
+#: employee/models.py:58
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:34
+#: venv/lib/python3.10/site-packages/tornado/locale.py:290
+msgid "October"
+msgstr "أكتوبر"
+
+#: employee/models.py:58
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:35
+#: venv/lib/python3.10/site-packages/tornado/locale.py:291
+msgid "November"
+msgstr "نوفمبر"
+
+#: employee/models.py:58
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:36
+#: venv/lib/python3.10/site-packages/tornado/locale.py:292
+msgid "December"
+msgstr "ديسمبر"
+
+#: employee/models.py:71
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#: employee/models.py:72
+msgid "Nationality"
+msgstr "جنسية"
+
+#: employee/models.py:73
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#: employee/models.py:74
+msgid "Department"
+msgstr "قسم"
+
+#: employee/models.py:75 templates/employee/login.html:42
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: employee/models.py:78
+msgid "Enter a valid phone number."
+msgstr "أدخل رقم هاتف صالحا."
+
+#: employee/models.py:79
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#: employee/models.py:81
+msgid "Start Date"
+msgstr "بدء العرض"
+
+#: employee/models.py:82
+msgid "Salary"
+msgstr "راتب"
+
+#: employee/models.py:83
+msgid "Bank Account Number"
+msgstr "رقم الحساب البنكي"
+
+#: employee/models.py:84
+msgid "Account Holder"
+msgstr "صاحب الحساب"
+
+#: employee/models.py:85
+msgid "Address"
+msgstr "عنوان"
+
+#: employee/models.py:86
+msgid "Slug"
+msgstr "سبيكه"
+
+#: employee/models.py:87 employee/models.py:270
+msgid "Notes"
+msgstr "تلاحظ"
+
+#: employee/models.py:158
+msgid "Profile picture must be in jpg, jpeg, or png format."
+msgstr "يجب أن تكون صورة الملف الشخصي بتنسيق jpg أو jpeg أو png."
+
+#: employee/models.py:163
+msgid "CV must be in pdf, doc, docx, jpg, jpeg, or png format."
+msgstr ""
+"يجب أن تكون السيرة الذاتية بتنسيق pdf أو doc أو docx أو jpg أو jpeg أو png."
+
+#: employee/models.py:168
+msgid "Document must be in pdf, jpg, jpeg, or png format."
+msgstr "يجب أن يكون المستند بتنسيق pdf أو jpg أو jpeg أو png."
+
+#: employee/models.py:182 employee/models.py:235 employee/models.py:252
+#: employee/models.py:266 employee/models.py:278
+msgid "Employee"
+msgstr "موظف"
+
+#: employee/models.py:183
+msgid "Workdays"
+msgstr "أيام العمل"
+
+#: employee/models.py:184 employee/models.py:239
+msgid "Overtime Hours"
+msgstr "ساعات العمل الإضافي"
+
+#: employee/models.py:185
+msgid "Absence Days"
+msgstr "أيام الغياب"
+
+#: employee/models.py:186 employee/models.py:238
+msgid "Deductions"
+msgstr "الخصومات"
+
+#: employee/models.py:236
+msgid "Base Salary"
+msgstr "الراتب الأساسي"
+
+#: employee/models.py:237
+msgid "Bonuses"
+msgstr "المكافات"
+
+#: employee/models.py:240
+msgid "Overtime Pay"
+msgstr "أجر العمل الإضافي"
+
+#: employee/models.py:241
+msgid "Total Salary"
+msgstr "إجمالي الراتب"
+
+#: employee/models.py:253
+msgid "Payment Date"
+msgstr "تاريخ الدفع"
+
+#: employee/models.py:254 templates/billing - Copy.html:46
+#: templates/billing.html:46
+msgid "Payment Method"
+msgstr "طريقة الدفع"
+
+#: employee/models.py:255 employee/models.py:269
+msgid "Status"
+msgstr "حالة"
+
+#: employee/models.py:267 employee/models.py:314
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#: employee/models.py:268
+msgid "Amount"
+msgstr "مبلغ"
+
+#: employee/models.py:279
+msgid "Notice ID"
+msgstr "معرف الإشعار"
+
+#: employee/models.py:280
+msgid "Title"
+msgstr "عنوان"
+
+#: employee/models.py:281
+msgid "Description"
+msgstr "وصف"
+
+#: employee/models.py:282
+msgid "Publish Date"
+msgstr "تاريخ النشر"
+
+#: employee/models.py:288
+msgid "Notice"
+msgstr "لاحظ"
+
+#: employee/models.py:289
+msgid "Notices"
+msgstr "اشعارات"
+
+#: employee/models.py:294
+msgid "Assignment ID"
+msgstr "معرف الواجب"
+
+#: employee/models.py:295
+msgid "Assigner"
+msgstr "المتنازل"
+
+#: employee/models.py:296
+msgid "Work Details"
+msgstr "تفاصيل العمل"
+
+#: employee/models.py:297
+msgid "Assign Date"
+msgstr "تاريخ التعيين"
+
+#: employee/models.py:298
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+#: employee/models.py:299
+msgid "Tasker"
+msgstr "تاسكر"
+
+#: employee/models.py:302
+#, python-format
+msgid "Assignment by %(assigner)s to %(tasker)s"
+msgstr "التعيين بواسطة٪ (المرسل) s إلى<code>٪ (تاكسر) s"
+
+#: employee/models.py:305
+msgid "Work Assignment"
+msgstr "مهمة العمل"
+
+#: employee/models.py:306
+msgid "Work Assignments"
+msgstr "مهام العمل"
+
+#: employee/models.py:311
+msgid "Request ID"
+msgstr "معرف الطلب"
+
+#: employee/models.py:312
+msgid "Requester"
+msgstr "الطالب"
+
+#: employee/models.py:313
+msgid "Request Message"
+msgstr "رسالة الطلب"
+
+#: employee/models.py:315
+msgid "Destination Employee"
+msgstr "موظف الوجهة"
+
+#: employee/models.py:318
+#, python-format
+msgid "Request by %(requester)s"
+msgstr "طلب بواسطة٪ (طالب)"
+
+#: employee/models.py:321
+msgid "Request"
+msgstr "طلب"
+
+#: employee/models.py:322
+msgid "Requests"
+msgstr "الطلبات"
+
+#: templates/admin/inc/branding.html:15
+msgid "Documentation"
+msgstr "توثيق"
+
+#: templates/admin/inc/branding.html:22
+msgid "Change password"
+msgstr "تغيير كلمة المرور"
+
+#: templates/admin/inc/branding.html:28
+msgid "Log out"
+msgstr "تسجيل الخروج"
+
+#: templates/admin/inc/branding.html:36
+msgid "Open"
+msgstr "مفتوح"
+
+#: templates/admin/inc/branding.html:9
+msgid "Wisdar   FFFFFXXXX"
+msgstr "فيسدار FFFFFXXXX"
+
+#: templates/admin/inc/branding.html:6
+msgid "Wisdar   FFFFFXXXXX"
+msgstr "فيسدار FFFFFXXXXX"
+
+#: templates/billing - Copy.html:21 templates/billing.html:21
+msgid "4562&nbsp;&nbsp;&nbsp;1122&nbsp;&nbsp;&nbsp;4594&nbsp;&nbsp;&nbsp;7852"
+msgstr ""
+"4562&amp;nbsp; نبسب؛ نبسب؛ 1122&amp;nbsp; نبسب؛ نبسب؛ 4594&amp;nbsp; نبسب؛ "
+"نبسب؛ 7852"
+
+#: templates/billing - Copy.html:25 templates/billing.html:25
+msgid "Card Holder"
+msgstr "حامل البطاقة"
+
+#: templates/billing - Copy.html:26 templates/billing.html:26
+msgid "Jack Peterson"
+msgstr "جاك بيترسون"
+
+#: templates/billing - Copy.html:29 templates/billing.html:29
+msgid "Expires"
+msgstr "تنتهي"
+
+#: templates/billing - Copy.html:30 templates/billing.html:30
+msgid "11/22"
+msgstr "11/22"
+
+#: templates/billing - Copy.html:50 templates/billing.html:50
+msgid "&nbsp;&nbsp;Add New Card"
+msgstr "نبسب؛ نبسب؛ إضافة بطاقة جديدة"
+
+#: templates/billing - Copy.html:60 templates/billing.html:60
+msgid "****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;7852"
+msgstr ""
+"نبسب؛ نبسب؛ &amp;nbsp;****&amp;nbsp; نبسب؛ &amp;nbsp;****&amp;nbsp; نبسب؛ "
+"نبسب؛ 7852"
+
+#: templates/billing - Copy.html:67 templates/billing.html:67
+msgid "****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;5248"
+msgstr ""
+"نبسب؛ نبسب؛ &amp;nbsp;****&amp;nbsp; نبسب؛ &amp;nbsp;****&amp;nbsp; نبسب؛ "
+"نبسب؛ 5248"
+
+#: templates/billing - Copy.html:82 templates/billing.html:82
+msgid "Invoices"
+msgstr "الفواتير"
+
+#: templates/billing - Copy.html:85 templates/billing.html:85
+msgid "View All"
+msgstr "عرض الكل"
+
+#: templates/billing - Copy.html:93 templates/billing.html:93
+msgid "March, 01, 2020"
+msgstr "مارس, 01, 2020"
+
+#: templates/billing - Copy.html:94 templates/billing.html:94
+msgid "#MS-415646"
+msgstr "#MS-415646"
+
+#: templates/billing - Copy.html:96 templates/billing.html:96
+msgid "$180"
+msgstr "180 ر.س."
+
+#: templates/billing - Copy.html:98 Copy.html:109 Copy.html:120 Copy.html:131
+#: Copy.html:142 templates/billing.html:98 templates/billing.html:109
+#: templates/billing.html:120 templates/billing.html:131
+#: templates/billing.html:142
+msgid "PDF"
+msgstr "بي دي إف"
+
+#: templates/billing - Copy.html:104 templates/billing.html:104
+msgid "February, 10, 2021"
+msgstr "فبراير, 10, 2021"
+
+#: templates/billing - Copy.html:105 templates/billing.html:105
+msgid "#RV-126749"
+msgstr "#RV-126749"
+
+#: templates/billing - Copy.html:107 templates/billing.html:107
+msgid "$250"
+msgstr "250 ر.س."
+
+#: templates/billing - Copy.html:115 templates/billing.html:115
+msgid "April, 05, 2020"
+msgstr "أبريل, 05, 2020"
+
+#: templates/billing - Copy.html:116 templates/billing.html:116
+msgid "#FB-212562"
+msgstr "#FB-212562"
+
+#: templates/billing - Copy.html:118 templates/billing.html:118
+msgid "$560"
+msgstr "560 ر.س."
+
+#: templates/billing - Copy.html:126 templates/billing.html:126
+msgid "June, 25, 2019"
+msgstr "يونيو, 25, 2019"
+
+#: templates/billing - Copy.html:127 templates/billing.html:127
+msgid "#QW-103578"
+msgstr "#QW-103578"
+
+#: templates/billing - Copy.html:129 templates/billing.html:129
+msgid "$120"
+msgstr "120 ر.س."
+
+#: templates/billing - Copy.html:137 templates/billing.html:137
+msgid "March, 01, 2019"
+msgstr "مارس, 01, 2019"
+
+#: templates/billing - Copy.html:138 templates/billing.html:138
+msgid "#AR-803481"
+msgstr "#AR-803481"
+
+#: templates/billing - Copy.html:140 templates/billing.html:140
+#: templates/virtual-reality.html:76
+msgid "$300"
+msgstr "300 ر.س."
+
+#: templates/billing - Copy.html:155 templates/billing.html:155
+msgid "Billing Information"
+msgstr "معلومات الفوترة"
+
+#: templates/billing - Copy.html:161 templates/billing.html:161
+msgid "John Doe"
+msgstr "جون دو"
+
+#: templates/billing - Copy.html:162 Copy.html:178 Copy.html:194 Copy.html:210
+#: templates/billing.html:162 templates/billing.html:178
+#: templates/billing.html:194 templates/billing.html:210
+msgid "Service:"
+msgstr "خدمة:"
+
+#: templates/billing - Copy.html:162 templates/billing.html:162
+msgid "Clinic Consultation"
+msgstr "استشارة العيادة"
+
+#: templates/billing - Copy.html:163 Copy.html:179 Copy.html:195 Copy.html:211
+#: templates/billing.html:163 templates/billing.html:179
+#: templates/billing.html:195 templates/billing.html:211
+msgid "Email Address:"
+msgstr "عنوان البريد الإلكتروني:"
+
+#: templates/billing - Copy.html:163 templates/billing.html:163
+msgid "john@example.com"
+msgstr "john@example.com"
+
+#: templates/billing - Copy.html:164 Copy.html:180 Copy.html:196 Copy.html:212
+#: templates/billing.html:164 templates/billing.html:180
+#: templates/billing.html:196 templates/billing.html:212
+msgid "Amount:"
+msgstr "مبلغ:"
+
+#: templates/billing - Copy.html:164 templates/billing.html:164
+#: templates/virtual-reality.html:47
+msgid "$150"
+msgstr "150 ر.س."
+
+#: templates/billing - Copy.html:168 Copy.html:184 Copy.html:200 Copy.html:216
+#: templates/billing.html:168 templates/billing.html:184
+#: templates/billing.html:200 templates/billing.html:216
+#: venv/lib/python3.10/site-packages/django/forms/formsets.py:499
+msgid "Delete"
+msgstr "حذف"
+
+#: templates/billing - Copy.html:171 Copy.html:187 Copy.html:203 Copy.html:219
+#: templates/billing.html:171 templates/billing.html:187
+#: templates/billing.html:203 templates/billing.html:219
+msgid "Edit"
+msgstr "حرر"
+
+#: templates/billing - Copy.html:177 templates/billing.html:177
+msgid "Jane Smith"
+msgstr "جين سميث"
+
+#: templates/billing - Copy.html:178 templates/billing.html:178
+msgid "Driver Transfer"
+msgstr "نقل السائق"
+
+#: templates/billing - Copy.html:179 templates/billing.html:179
+msgid "jane@example.com"
+msgstr "jane@example.com"
+
+#: templates/billing - Copy.html:180 templates/billing.html:180
+#: templates/virtual-reality.html:54
+msgid "$80"
+msgstr "80 ر.س."
+
+#: templates/billing - Copy.html:193 templates/billing.html:193
+msgid "Michael Johnson"
+msgstr "مايكل جونسون"
+
+#: templates/billing - Copy.html:194 templates/billing.html:194
+msgid "Hotel Stay"
+msgstr "الإقامة في الفندق"
+
+#: templates/billing - Copy.html:195 templates/billing.html:195
+msgid "michael@example.com"
+msgstr "michael@example.com"
+
+#: templates/billing - Copy.html:196 templates/billing.html:196
+#: templates/virtual-reality.html:61
+msgid "$200"
+msgstr "200 ر.س."
+
+#: templates/billing - Copy.html:209 templates/billing.html:209
+msgid "Emily Clark"
+msgstr "إميلي كلارك"
+
+#: templates/billing - Copy.html:210 templates/billing.html:210
+msgid "Referral Commission"
+msgstr "لجنة الإحالة"
+
+#: templates/billing - Copy.html:211 templates/billing.html:211
+msgid "emily@example.com"
+msgstr "emily@example.com"
+
+#: templates/billing - Copy.html:212 templates/billing.html:212
+msgid "$100"
+msgstr "100 ر.س."
+
+#: templates/billing - Copy.html:232 templates/billing.html:232
+msgid "Your Transactions"
+msgstr "معاملاتك"
+
+#: templates/billing - Copy.html:236 templates/billing.html:236
+msgid "23 - 30 March 2020"
+msgstr "23 - 30 مارس 2020"
+
+#: templates/billing - Copy.html:241 templates/billing.html:241
+msgid "Newest"
+msgstr "أحدث"
+
+#: templates/billing - Copy.html:249 templates/billing.html:249
+#: templates/virtual-reality.html:47
+msgid "Payment to Clinic"
+msgstr "الدفع للعيادة"
+
+#: templates/billing - Copy.html:250 templates/billing.html:250
+msgid "27 March 2020, at 12:30 PM"
+msgstr "٢٧ مارس ٢٠٢٠، الساعة ١٢:٣٠ م"
+
+#: templates/billing - Copy.html:253 templates/billing.html:253
+msgid "- $ 1,500"
+msgstr "- 1500 دولار"
+
+#: templates/billing - Copy.html:261 templates/billing.html:261
+msgid "Monthly Referral Commission"
+msgstr "عمولة الإحالة الشهرية"
+
+#: templates/billing - Copy.html:262 templates/billing.html:262
+msgid "27 March 2020, at 04:30 AM"
+msgstr "27 مارس 2020، الساعة 04:30 صباحا"
+
+#: templates/billing - Copy.html:265 templates/billing.html:265
+msgid "+ $ 200"
+msgstr "+ 200 دولار"
+
+#: templates/billing - Copy.html:268 templates/billing.html:268
+msgid "Yesterday"
+msgstr "أمس"
+
+#: templates/billing - Copy.html:276 templates/billing.html:276
+#: templates/virtual-reality.html:53
+msgid "Payment to Driver"
+msgstr "الدفع للسائق"
+
+#: templates/billing - Copy.html:277 templates/billing.html:277
+msgid "26 March 2020, at 13:45 PM"
+msgstr "26 مارس 2020، الساعة 13:45 مساء"
+
+#: templates/billing - Copy.html:280 templates/billing.html:280
+msgid "- $ 100"
+msgstr "- 100 دولار"
+
+#: templates/billing - Copy.html:288 templates/billing.html:288
+#: templates/virtual-reality.html:60
+msgid "Payment to Hotel"
+msgstr "الدفع للفندق"
+
+#: templates/billing - Copy.html:289 templates/billing.html:289
+msgid "26 March 2020, at 12:30 PM"
+msgstr "26 مارس 2020، الساعة 12:30 مساء"
+
+#: templates/billing - Copy.html:292 templates/billing.html:292
+msgid "- $ 200"
+msgstr "- 200 دولار"
+
+#: templates/billing - Copy.html:300 templates/billing.html:300
+msgid "Referral Commission Received"
+msgstr "تم استلام عمولة الإحالة"
+
+#: templates/billing - Copy.html:301 templates/billing.html:301
+msgid "26 March 2020, at 08:30 AM"
+msgstr "26 مارس 2020, الساعة 08:30 AM"
+
+#: templates/billing - Copy.html:304 templates/billing.html:304
+msgid "+ $ 100"
+msgstr "+ 100 دولار"
+
+#: templates/billing - Copy.html:312 templates/billing.html:312
+msgid "Pending Payment"
+msgstr "الدفع المعلق"
+
+#: templates/billing - Copy.html:313 templates/billing.html:313
+msgid "26 March 2020, at 05:00 AM"
+msgstr "26 مارس 2020, الساعة 05:00 ص"
+
+#: templates/billing - Copy.html:316 templates/billing.html:316
+msgid "Pending"
+msgstr "المعلقه"
+
+#: templates/dashboardindex.html:20
+msgid "New messages"
+msgstr "رسائل جديدة"
+
+#: templates/dashboardindex.html:24
+msgid "View Messages"
+msgstr "عرض الرسائل"
+
+#: templates/dashboardindex.html:42
+msgid "Appointments"
+msgstr "المواعيد"
+
+#: templates/dashboardindex.html:46
+msgid "View Appointments"
+msgstr "عرض المواعيد"
+
+#: templates/dashboardindex.html:64
+msgid "Prescriptions"
+msgstr "وصفات"
+
+#: templates/dashboardindex.html:68
+msgid "View Prescriptions"
+msgstr "عرض الوصفات الطبية"
+
+#: templates/dashboardindex.html:84
+msgid "$"
+msgstr "$"
+
+#: templates/dashboardindex.html:85
+msgid "Your current balance"
+msgstr "رصيدك الحالي"
+
+#: templates/dashboardindex.html:90
+msgid "Generate Referral Link"
+msgstr "إنشاء رابط الإحالة"
+
+#: templates/dashboardindex.html:92 templates/dashboardindex.html:104
+msgid "Your Referral Link:"
+msgstr "رابط الإحالة الخاص بك:"
+
+#: templates/employee/login.html:20
+msgid "Wisdar"
+msgstr "ويسدار"
+
+#: templates/employee/login.html:21
+msgid "Employee Management Portal "
+msgstr "بوابة إدارة الموظفين "
+
+#: templates/employee/login.html:31
+#: templates/includes/navigation-fullscreen.html:55
+msgid "Sign In"
+msgstr "تسجيل الدخول"
+
+#: templates/employee/login.html:32
+msgid "Enter your email and password to access your UserSpace"
+msgstr ""
+"أدخل بريدك الإلكتروني وكلمة المرور للوصول إلى مساحة المستخدمين الخاصة بك"
+
+#: templates/employee/login.html:43
+msgid "Enter your email"
+msgstr "أدخل بريدك الإلكتروني"
+
+#: templates/employee/login.html:48 templates/employee/signup.html:95
+msgid "Password"
+msgstr "شعار"
+
+#: templates/employee/login.html:49
+msgid "Enter your password"
+msgstr "أدخل كلمة المرور الخاصة بك"
+
+#: templates/employee/login.html:54 templates/includes/sidenav.html:186
+#: templates/page-403.html:20
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: templates/employee/login.html:69
+msgid "Don't have an account?"
+msgstr "ليس لديك حساب؟"
+
+#: templates/employee/login.html:69
+msgid "Sign up!"
+msgstr "التسجيل!"
+
+#: templates/employee/signup.html:14
+msgid "Welcome!"
+msgstr "أهلًا وسهلًا!"
+
+#: templates/employee/signup.html:15
+msgid "to Wisdar Employee Management Portal"
+msgstr "إلى بوابة ويسدار لإدارة الموظفين"
+
+#: templates/employee/signup.html:21
+msgid "Register with"
+msgstr "سجل مع"
+
+#: templates/employee/signup.html:62
+#: venv/lib/python3.10/site-packages/django/utils/text.py:286
+msgid "or"
+msgstr "أو"
+
+#: templates/employee/signup.html:65
+msgid "Fill in these Forms"
+msgstr "املأ هذه النماذج"
+
+#: templates/employee/signup.html:77
+msgid "First Name"
+msgstr "الاسم الأول"
+
+#: templates/employee/signup.html:81
+msgid "Last Name"
+msgstr "اسم العائلة"
+
+#: templates/employee/signup.html:88
+msgid "Email Address"
+msgstr "عنوان البريد الإلكتروني"
+
+#: templates/employee/signup.html:99
+msgid "Confirm Password"
+msgstr "تأكيد كلمة المرور"
+
+#: templates/employee/signup.html:107
+#: templates/includes/navigation-fullscreen.html:51
+msgid "Sign Up"
+msgstr "التسجيل"
+
+#: templates/error.html:4 templates/includes/error.html:4
+msgid "&times;"
+msgstr "والأوقات؛"
+
+#: templates/includes/footer-fullscreen.html:8
+#: templates/includes/footer.html:6 templates/page-403.html:27
+#: templates/page-404.html:20 templates/page-404.html:27
+#: templates/page-500.html:20 templates/page-500.html:26 templates/profile
+#: (2).html:3 templates/virtual-reality.html:21
+msgid "Home"
+msgstr "وطن"
+
+#: templates/includes/footer-fullscreen.html:9
+#: templates/includes/footer.html:7
+msgid "About"
+msgstr "عن"
+
+#: templates/includes/footer-fullscreen.html:10
+#: templates/includes/footer.html:8
+msgid "Facilities"
+msgstr "مرافق"
+
+#: templates/includes/footer-fullscreen.html:11
+#: templates/includes/footer.html:9
+msgid "Privacy Policy"
+msgstr "سياسة الخصوصية"
+
+#: templates/includes/footer-fullscreen.html:12
+#: templates/includes/footer.html:10
+msgid "Terms of Service"
+msgstr "شروط الخدمة"
+
+#: templates/includes/footer-fullscreen.html:17
+msgid "&copy; Dent i-Delil Clinic - Design by Lotfi Kanouni"
+msgstr "ونسخ؛ عيادة دنت دليلة - تصميم لطفي كنوني"
+
+#: templates/includes/language.html:29
+#: templates/includes/navigation-fullscreen.html:10
+msgid "English"
+msgstr "الإنكليزية"
+
+#: templates/includes/language.html:32
+#: templates/includes/navigation-fullscreen.html:13
+msgid "Arabic"
+msgstr "العربية"
+
+#: templates/includes/navigation-fullscreen.html:4
+msgid "Dent i-Delil Clinic"
+msgstr "عيادة دنت آي دليليل"
+
+#: templates/includes/navigation-fullscreen.html:16
+msgid "French"
+msgstr "الفرنسية"
+
+#: templates/includes/navigation-fullscreen.html:19
+msgid "Turkish"
+msgstr "التركية"
+
+#: templates/includes/navigation-fullscreen.html:34
+msgid "FLIGHT RESERVATION"
+msgstr "حجز الطيران"
+
+#: templates/includes/navigation-fullscreen.html:39
+#: templates/includes/navigation-fullscreen.html:42
+#: templates/includes/navigation.html:10
+#: templates/includes/navigationinst.txt:9
+msgid "Dashboard"
+msgstr "لوحه القياده"
+
+#: templates/includes/navigation-fullscreen.html:47
+#: templates/messages.html:190 templates/profile (2).html:25
+msgid "Profile"
+msgstr "ملف تعريف"
+
+#: templates/includes/navigation-fullscreen.html:62
+msgid "Whatsapp"
+msgstr "واتس اب"
+
+#: templates/includes/navigation.html:8
+#: templates/includes/navigationinst.txt:7
+msgid "Pages"
+msgstr "الصفحات"
+
+#: templates/includes/navigation.html:12
+msgid "Hello"
+msgstr "مرحبا"
+
+#: templates/includes/navigation.html:18
+msgid "Type here..."
+msgstr "اكتب هنا..."
+
+#: templates/includes/navigationinst.txt:56
+msgid "New message"
+msgstr "رسالة جديدة"
+
+#: templates/includes/navigationinst.txt:56
+msgid "from Laur"
+msgstr "من لور"
+
+#: templates/includes/navigationinst.txt:58
+msgid "13 minutes ago"
+msgstr "منذ 13 دقيقة"
+
+#: templates/includes/navigationinst.txt:71
+msgid "New album"
+msgstr "ألبوم جديد"
+
+#: templates/includes/navigationinst.txt:71
+msgid "by Travis Scott"
+msgstr "بواسطة ترافيس سكوت"
+
+#: templates/includes/navigationinst.txt:73
+msgid "1 day"
+msgstr "1 يوم"
+
+#: templates/includes/navigationinst.txt:83
+msgid "credit-card"
+msgstr "بطاقة الإئتمان"
+
+#: templates/includes/navigationinst.txt:97
+msgid "Payment successfully completed"
+msgstr "تم الدفع بنجاح"
+
+#: templates/includes/navigationinst.txt:99
+msgid "2 days"
+msgstr "2 أيام"
+
+#: templates/includes/sidenav.html:7
+msgid "WISDAR"
+msgstr "ويسدار"
+
+#: templates/includes/sidenav.html:19
+msgid "DASHBOARD"
+msgstr "لوحه القياده"
+
+#: templates/includes/sidenav.html:27
+msgid "ATTENDENCE"
+msgstr "الحضور"
+
+#: templates/includes/sidenav.html:35
+msgid "NOTICE"
+msgstr "لاحظ"
+
+#: templates/includes/sidenav.html:43
+msgid "REQUESTS"
+msgstr "الطلبات"
+
+#: templates/includes/sidenav.html:51
+msgid "VIRTUAL REALITY"
+msgstr "الواقع الافتراضي"
+
+#: templates/includes/sidenav.html:59
+msgid "#"
+msgstr "#"
+
+#: templates/includes/sidenav.html:74
+msgid "PROFILE"
+msgstr "ملف تعريف"
+
+#: templates/includes/sidenav.html:82
+msgid "SCHEDULE"
+msgstr "جدول"
+
+#: templates/includes/sidenav.html:91
+msgid "WORK SCHEDULES"
+msgstr "مواعيد العمل"
+
+#: templates/includes/sidenav.html:99
+msgid "ASSIGNED TO ME"
+msgstr "مخصص لي"
+
+#: templates/includes/sidenav.html:109
+msgid "MY WORK"
+msgstr "عملي"
+
+#: templates/includes/sidenav.html:117
+msgid "WORK DETAILS"
+msgstr "تفاصيل العمل"
+
+#: templates/includes/sidenav.html:126
+msgid "MESSAGES"
+msgstr "رسائل"
+
+#: templates/includes/sidenav.html:138
+msgid "System Logs"
+msgstr "سجلات النظام"
+
+#: templates/includes/sidenav.html:146
+msgid "assignwork"
+msgstr "تعيين"
+
+#: templates/includes/sidenav.html:154
+msgid "PROJECT DEVELOPMENT"
+msgstr "تطوير المشاريع"
+
+#: templates/includes/sidenav.html:162
+msgid "MARKETING TEAM"
+msgstr "فريق التسويق"
+
+#: templates/includes/sidenav.html:175
+msgid "Logout"
+msgstr "الخروج"
+
+#: templates/includes/sidenav.html:194
+msgid "Register"
+msgstr "سجل"
+
+#: templates/layouts/dashbase.html:107
+msgid "See our dashboard options."
+msgstr "راجع خيارات لوحة المعلومات الخاصة بنا."
+
+#: templates/layouts/dashbase.html:108
+msgid "Argon Configurator"
+msgstr "مكون الأرجون"
+
+#: templates/layouts/dashbase.html:113
+msgid "Sidebar Colors"
+msgstr "ألوان الشريط الجانبي"
+
+#: templates/layouts/dashbase.html:126
+msgid "Sidenav Type"
+msgstr "نوع Sidenav"
+
+#: templates/layouts/dashbase.html:127
+msgid "Choose between 2 different sidenav types."
+msgstr "اختر من بين 2 أنواع مختلفة من sidenav."
+
+#: templates/layouts/dashbase.html:130
+msgid "White"
+msgstr "أبيض"
+
+#: templates/layouts/dashbase.html:131
+msgid "Dark"
+msgstr "داكن"
+
+#: templates/layouts/dashbase.html:133
+msgid "You can change the sidenav type just on desktop view."
+msgstr "يمكنك تغيير نوع sidenav فقط على عرض سطح المكتب."
+
+#: templates/layouts/dashbase.html:135
+msgid "Navbar Fixed"
+msgstr "شريط التنقل ثابت"
+
+#: templates/layouts/dashbase.html:142
+msgid "Light / Dark"
+msgstr "فاتح / داكن"
+
+#: templates/layouts/dashbase.html:150
+msgid "whatsapp"
+msgstr "واتس اب"
+
+#: templates/layouts/dashbase.html:154
+msgid "Facebook"
+msgstr "فيس بوك"
+
+#: templates/layouts/dashbase.html:158
+msgid "Go to Home Page"
+msgstr "اذهب إلى الصفحة الرئيسية"
+
+#: templates/layouts/dashbase.html:159
+msgid ""
+"Our patient dashboard is designed to provide easy access to all necessary "
+"medical services and information. Patients can manage their appointments, "
+"view medical records, and receive updates about their health status all in "
+"one place. Our goal is to enhance the patient experience by making "
+"healthcare more accessible and efficient."
+msgstr ""
+"تم تصميم لوحة معلومات المريض الخاصة بنا لتوفير سهولة الوصول إلى جميع الخدمات"
+" والمعلومات الطبية الضرورية. يمكن للمرضى إدارة مواعيدهم وعرض السجلات الطبية "
+"وتلقي تحديثات حول حالتهم الصحية في مكان واحد. هدفنا هو تعزيز تجربة المريض من"
+" خلال جعل الرعاية الصحية أكثر سهولة وكفاءة."
+
+#: templates/messages.html:16
+msgid "Message Modal"
+msgstr "رسالة مشروطة"
+
+#: templates/messages.html:23
+msgid "New message to @CT"
+msgstr "رسالة جديدة إلى @CT"
+
+#: templates/messages.html:32
+msgid "Conversation Name:"
+msgstr "اسم المحادثة:"
+
+#: templates/messages.html:36
+msgid "Recipient:"
+msgstr "المستلم:"
+
+#: templates/messages.html:44
+msgid "Message:"
+msgstr "رسالة:"
+
+#: templates/messages.html:48
+msgid "Close"
+msgstr "غلق"
+
+#: templates/messages.html:49
+msgid "Send message"
+msgstr "ارسل رسالة"
+
+#: templates/messages.html:59
+msgid "Send Message"
+msgstr "ارسل رسالة"
+
+#: templates/messages.html:72
+msgid "-"
+msgstr "-"
+
+#: templates/messages.html:79
+msgid "No Messages"
+msgstr "لا توجد رسائل"
+
+#: templates/messages.html:85
+msgid "No messages."
+msgstr "لا رسائل."
+
+#: templates/messages.html:104
+msgid "Friends"
+msgstr "اصدقاء"
+
+#: templates/messages.html:113
+msgid "Charlie Watson"
+msgstr "تشارلي واتسون"
+
+#: templates/messages.html:115
+msgid "Typing..."
+msgstr "كتابه..."
+
+#: templates/messages.html:124
+msgid "Jane Doe"
+msgstr "جين دو"
+
+#: templates/messages.html:125
+#: venv/lib/python3.10/site-packages/tornado/locale.py:388
+msgid "1 hour ago"
+msgstr "منذ 1 ساعة"
+
+#: templates/messages.html:126
+msgid "Computer users and programmers"
+msgstr "مستخدمو الكمبيوتر والمبرمجون"
+
+#: templates/messages.html:134
+msgid "Mila Skylar"
+msgstr "ميلا سكايلر"
+
+#: templates/messages.html:135
+msgid "24 min ago"
+msgstr "منذ 24 دقيقة"
+
+#: templates/messages.html:136
+msgid "You can subscribe to receive weekly..."
+msgstr "يمكنك الاشتراك لتلقي أسبوعيا ..."
+
+#: templates/messages.html:144
+msgid "Sofia Scarlett"
+msgstr "صوفيا سكارليت"
+
+#: templates/messages.html:145
+msgid "7 hours ago"
+msgstr "منذ 7 ساعة"
+
+#: templates/messages.html:146
+msgid "It’s an effective resource regardless.."
+msgstr "إنه مورد فعال بغض النظر .."
+
+#: templates/messages.html:155
+msgid "Tom Klein"
+msgstr "توم كلاين"
+
+#: templates/messages.html:156
+msgid "1 day ago"
+msgstr "1 اليوم منذ"
+
+#: templates/messages.html:158
+msgid "Be sure to check it out if your dev pro..."
+msgstr "تأكد من التحقق من ذلك إذا كان مطورك ..."
+
+#: templates/messages.html:173
+msgid "Dr. Alex Johnson"
+msgstr "د. أليكس جونسون"
+
+#: templates/messages.html:174
+msgid "last seen today at 1:53am"
+msgstr "شوهد اليوم آخر مرة الساعة 1:53 صباحا"
+
+#: templates/messages.html:193
+msgid "Mute conversation"
+msgstr "كتم صوت المحادثة"
+
+#: templates/messages.html:196
+msgid "Block"
+msgstr "حجز"
+
+#: templates/messages.html:199
+msgid "Clear chat"
+msgstr "مسح الدردشة"
+
+#: templates/messages.html:202
+msgid "Delete chat"
+msgstr "حذف الدردشة"
+
+#: templates/messages.html:214
+msgid ""
+"Hello Dr. Johnson, I've been experiencing severe headaches for the past "
+"week. What could be causing this?"
+msgstr ""
+"مرحبا دكتور جونسون ، لقد كنت أعاني من صداع شديد خلال الأسبوع الماضي. ما الذي"
+" يمكن أن يسبب هذا؟"
+
+#: templates/messages.html:217
+msgid "3:14am"
+msgstr "3:14ص"
+
+#: templates/messages.html:227
+msgid ""
+"Hi, it could be due to various reasons like stress, lack of sleep, or even "
+"vision problems. Have you been under a lot of stress lately?"
+msgstr ""
+"مرحبا ، قد يكون ذلك لأسباب مختلفة مثل الإجهاد أو قلة النوم أو حتى مشاكل في "
+"الرؤية. هل تعرضت للكثير من التوتر مؤخرا؟"
+
+#: templates/messages.html:230 templates/messages.html:261
+#: templates/messages.html:274 templates/messages.html:287
+msgid "4:42pm"
+msgstr "4:42م"
+
+#: templates/messages.html:238
+msgid "Wed, 3:27pm"
+msgstr "الأربعاء، 3:27 مساء"
+
+#: templates/messages.html:245
+msgid "Yes, I have been working long hours lately. Could that be the reason?"
+msgstr "نعم ، لقد كنت أعمل لساعات طويلة مؤخرا. هل يمكن أن يكون هذا هو السبب؟"
+
+#: templates/messages.html:248
+msgid "4:31pm"
+msgstr "4:31م"
+
+#: templates/messages.html:258
+msgid ""
+"It’s possible. Try to take regular breaks and ensure you get enough sleep. "
+"If the headaches persist, we might need to run some tests."
+msgstr ""
+"إنه ممكن. حاول أن تأخذ فترات راحة منتظمة وتأكد من حصولك على قسط كاف من "
+"النوم. إذا استمر الصداع ، فقد نحتاج إلى إجراء بعض الاختبارات."
+
+#: templates/messages.html:271
+msgid ""
+"Thank you, Doctor. I’ll try to manage my stress better and get more sleep. "
+"I’ll keep you updated."
+msgstr ""
+"شكرا لك يا دكتور. سأحاول إدارة التوتر بشكل أفضل والحصول على مزيد من النوم. "
+"سأبقيك على اطلاع."
+
+#: templates/messages.html:284
+msgid "You’re welcome. Take care!"
+msgstr "عفوًا. احترس!"
+
+#: templates/page-403.html:18
+msgid "Oups! Error 403"
+msgstr "عفوا! خطأ 403"
+
+#: templates/page-403.html:20
+msgid "Access denied - Please authenticate"
+msgstr "تم رفض الوصول - يرجى المصادقة"
+
+#: templates/page-403.html:31 templates/page-404.html:31
+#: templates/page-500.html:30
+msgid "Get Support"
+msgstr "احصل على الدعم"
+
+#: templates/page-404.html:18
+msgid "Oups! Error 404"
+msgstr "عفوا! خطأ 404"
+
+#: templates/page-404.html:20
+msgid "Page not found -"
+msgstr "لم يتم العثور على الصفحة -"
+
+#: templates/page-500.html:18
+msgid "Oups! Error 500"
+msgstr "عفوا! خطأ 500"
+
+#: templates/page-500.html:20
+msgid "Server error, please contact support -"
+msgstr "خطأ في الخادم ، يرجى الاتصال بالدعم -"
+
+#: templates/page-500.html:20
+msgid "."
+msgstr "."
+
+#: templates/profile (2).html:31 (2).html:83
+msgid "Upload Files"
+msgstr "تحميل الملفات"
+
+#: templates/profile (2).html:44
+msgid "Profile Picture"
+msgstr "صورة الملف الشخصي"
+
+#: templates/profile (2).html:46
+msgid "Default Profile Picture"
+msgstr "صورة ملف التعريف الافتراضية"
+
+#: templates/profile (2).html:56
+msgid "Joined on"
+msgstr "انضم بتاريخ"
+
+#: templates/profile (2).html:66
+msgid "Basic Info"
+msgstr "معلومات اساسية"
+
+#: templates/profile (2).html:67 (2).html:84 (2).html:101
+msgid "Enabled"
+msgstr "تمكين"
+
+#: templates/profile (2).html:74
+msgid "Update Profile"
+msgstr "تحديث الملف الشخصي"
+
+#: templates/profile (2).html:91 templates/upload_file.html:15
+msgid "Upload File"
+msgstr "تحميل الملف"
+
+#: templates/profile (2).html:100
+msgid "Previously Uploaded Files"
+msgstr "الملفات التي تم تحميلها مسبقا"
+
+#: templates/profile (2).html:113
+msgid "No files have been uploaded yet."
+msgstr "لم يتم تحميل أي ملفات حتى الآن."
+
+#: templates/profile (2).html:139
+msgid "Success"
+msgstr "نجاح"
+
+#: templates/profile (2).html:140
+msgid "File uploaded successfully."
+msgstr "تم تحميل الملف بنجاح."
+
+#: templates/profile (2).html:144
+msgid "Error"
+msgstr "خطأ"
+
+#: templates/profile (2).html:145
+msgid "There was an error uploading the file."
+msgstr "حدث خطأ أثناء تحميل الملف."
+
+#: templates/scheduletemp.html:11
+msgid "Team members:"
+msgstr "أعضاء الفريق:"
+
+#: templates/scheduletemp.html:14
+msgid "Dr. Jessica Rowland"
+msgstr "د. جيسيكا رولاند"
+
+#: templates/scheduletemp.html:17
+msgid "Dr. Audrey Love"
+msgstr "د. أودري لوف"
+
+#: templates/scheduletemp.html:20
+msgid "Dr. Michael Lewis"
+msgstr "د. مايكل لويس"
+
+#: templates/scheduletemp.html:23
+msgid "Dr. Lucia Linda"
+msgstr "د. لوسيا ليندا"
+
+#: templates/scheduletemp.html:49
+msgid "Next events"
+msgstr "الأحداث القادمة"
+
+#: templates/scheduletemp.html:61
+msgid "Productivity"
+msgstr "الانتاجيه"
+
+#: templates/scheduletemp.html:64
+msgid "in 2024"
+msgstr "في عام 2024"
+
+#: templates/scheduletemp.html:73
+msgid "Action"
+msgstr "فعل"
+
+#: templates/scheduletemp.html:74
+msgid "Another action"
+msgstr "إجراء آخر"
+
+#: templates/scheduletemp.html:75
+msgid "Something else here"
+msgstr "شيء آخر هنا"
+
+#: templates/upload_file.html:8
+msgid "Upload Employee File"
+msgstr "تحميل ملف الموظف"
+
+#: templates/virtual-reality.html:18
+msgid "My Profile"
+msgstr "ملفي الشخصي"
+
+#: templates/virtual-reality.html:19 templates/virtual-reality.html:124
+#: templates/virtual-reality.html:127 templates/virtual-reality.html:130
+#: templates/virtual-reality.html:133
+msgid "Image placeholder"
+msgstr "العنصر النائب للصورة"
+
+#: templates/virtual-reality.html:24
+msgid "Search"
+msgstr "بحث"
+
+#: templates/virtual-reality.html:27
+msgid "Minimize"
+msgstr "تصغير"
+
+#: templates/virtual-reality.html:34
+msgid "12°C"
+msgstr "12 درجة مئوية"
+
+#: templates/virtual-reality.html:35
+msgid "Cloudy"
+msgstr "غائم"
+
+#: templates/virtual-reality.html:38
+msgid "image sun"
+msgstr "صورة الشمس"
+
+#: templates/virtual-reality.html:46
+msgid "08:00"
+msgstr "08:00"
+
+#: templates/virtual-reality.html:52
+msgid "09:30"
+msgstr "09:30"
+
+#: templates/virtual-reality.html:59
+msgid "11:00"
+msgstr "11:00"
+
+#: templates/virtual-reality.html:65 templates/virtual-reality.html:83
+msgid "Show More"
+msgstr "عرض المزيد"
+
+#: templates/virtual-reality.html:74
+msgid "my Referral"
+msgstr "الإحالة الخاصة بي"
+
+#: templates/virtual-reality.html:77
+msgid "Total Earned"
+msgstr "إجمالي المكتسب"
+
+#: templates/virtual-reality.html:80
+msgid "Last Month: $100"
+msgstr "الشهر الماضي: 100 دولار"
+
+#: templates/virtual-reality.html:81
+msgid "This Month: $200"
+msgstr "هذا الشهر: $200"
+
+#: templates/virtual-reality.html:90
+msgid "Messages (21)"
+msgstr "الرسائل (21)"
+
+#: templates/virtual-reality.html:91
+msgid "Check your messages"
+msgstr "التحقق من رسائلك"
+
+#: templates/virtual-reality.html:91
+msgid "Check"
+msgstr "فحص"
+
+#: templates/virtual-reality.html:101
+msgid "Some Kind Of Blues"
+msgstr "نوع من البلوز"
+
+#: templates/virtual-reality.html:102
+msgid "Deftones"
+msgstr "ديفتون"
+
+#: templates/virtual-reality.html:104
+msgid "Prev"
+msgstr "السابق"
+
+#: templates/virtual-reality.html:107
+msgid "Pause"
+msgstr "تورع"
+
+#: templates/virtual-reality.html:110 templates/virtual-reality.html:167
+#: templates/virtual-reality.html:182 templates/virtual-reality.html:197
+#: templates/virtual-reality.html:212
+msgid "Next"
+msgstr "مقبل"
+
+#: templates/virtual-reality.html:120
+#: venv/lib/python3.10/site-packages/django/contrib/messages/apps.py:16
+msgid "Messages"
+msgstr "رسائل"
+
+#: templates/virtual-reality.html:123
+msgid "2 New Messages"
+msgstr "2 رسائل جديدة"
+
+#: templates/virtual-reality.html:126
+msgid "1 New Message"
+msgstr "1 رسالة جديدة"
+
+#: templates/virtual-reality.html:129
+msgid "13 New Messages"
+msgstr "13 رسائل جديدة"
+
+#: templates/virtual-reality.html:132
+msgid "7 New Messages"
+msgstr "7 رسائل جديدة"
+
+#: templates/virtual-reality.html:160
+msgid "This is where you can access your profile, home, search, and more."
+msgstr ""
+"هذا هو المكان الذي يمكنك فيه الوصول إلى ملفك الشخصي والمنزل والبحث والمزيد."
+
+#: templates/virtual-reality.html:175
+msgid "This section displays the current weather and temperature."
+msgstr "يعرض هذا القسم الطقس الحالي ودرجة الحرارة."
+
+#: templates/virtual-reality.html:190
+msgid "Here you can view your upcoming payments."
+msgstr "هنا يمكنك عرض مدفوعاتك القادمة."
+
+#: templates/virtual-reality.html:205
+msgid "This card shows your referral earnings."
+msgstr "تعرض هذه البطاقة أرباح الإحالة الخاصة بك."
+
+#: templates/virtual-reality.html:220
+msgid "Check your messages and see who has contacted you recently."
+msgstr "تحقق من رسائلك ومعرفة من اتصل بك مؤخرا."
+
+#: templates/virtual-reality.html:227
+msgid "Done"
+msgstr "منجز"
+
+#: venv/lib/python3.10/site-packages/click/_termui_impl.py:518
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr "{محرر}: فشل التحرير"
+
+#: venv/lib/python3.10/site-packages/click/_termui_impl.py:522
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr "{محرر}: فشل التحرير: <code>{e}"
+
+#: venv/lib/python3.10/site-packages/click/core.py:1120
+msgid "Aborted!"
+msgstr "احباط!"
+
+#: venv/lib/python3.10/site-packages/click/core.py:1309
+#: venv/lib/python3.10/site-packages/click/decorators.py:559
+msgid "Show this message and exit."
+msgstr "إظهار هذه الرسالة والخروج."
+
+#: venv/lib/python3.10/site-packages/click/core.py:1340
+#: venv/lib/python3.10/site-packages/click/core.py:1370
+#, python-brace-format
+msgid "(Deprecated) {text}"
+msgstr "(مهمل) {نص}"
+
+#: venv/lib/python3.10/site-packages/click/core.py:1387
+msgid "Options"
+msgstr "خيارات"
+
+#: venv/lib/python3.10/site-packages/click/core.py:1413
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:1429
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr "تحذير من الإهمال: تم إهمال الأمر {name!r}."
+
+#: venv/lib/python3.10/site-packages/click/core.py:1636
+msgid "Commands"
+msgstr "الاوامر"
+
+#: venv/lib/python3.10/site-packages/click/core.py:1668
+msgid "Missing command."
+msgstr "أمر مفقود."
+
+#: venv/lib/python3.10/site-packages/click/core.py:1746
+msgid "No such command {name!r}."
+msgstr "لا يوجد مثل هذا الأمر {name!r}."
+
+#: venv/lib/python3.10/site-packages/click/core.py:2310
+msgid "Value must be an iterable."
+msgstr "يجب أن تكون القيمة قابلة للتكرار."
+
+#: venv/lib/python3.10/site-packages/click/core.py:2331
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/click/core.py:2778
+#, python-brace-format
+msgid "env var: {var}"
+msgstr "env var: {var}"
+
+#: venv/lib/python3.10/site-packages/click/core.py:2808
+msgid "(dynamic)"
+msgstr "(ديناميكي)"
+
+#: venv/lib/python3.10/site-packages/click/core.py:2821
+#, python-brace-format
+msgid "default: {default}"
+msgstr "الافتراضي: {افتراضي}"
+
+#: venv/lib/python3.10/site-packages/click/core.py:2834
+msgid "required"
+msgstr "مطلوب"
+
+#: venv/lib/python3.10/site-packages/click/decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr "٪ (prog) s ، الإصدار <code>٪ (الإصدار) s"
+
+#: venv/lib/python3.10/site-packages/click/decorators.py:528
+msgid "Show the version and exit."
+msgstr "إظهار الإصدار والخروج."
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:44
+#: venv/lib/python3.10/site-packages/click/exceptions.py:80
+#, python-brace-format
+msgid "Error: {message}"
+msgstr "خطأ: {رسالة}"
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:72
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr "جرب \"{command} <code>{option}\" للحصول على المساعدة."
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:121
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr "قيمة غير صالحة: {message}"
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:123
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr "قيمة غير صالحة ل {param_hint}: <code>{message}"
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:179
+msgid "Missing argument"
+msgstr "وسيطة مفقودة"
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:181
+msgid "Missing option"
+msgstr "خيار مفقود"
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:183
+msgid "Missing parameter"
+msgstr "معلمة مفقودة"
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:185
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr "مفقود {param_type}"
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:192
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr "المعلمة المفقودة: {param_name}"
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:212
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr "لا يوجد مثل هذا الخيار: {name}"
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:224
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:262
+msgid "unknown error"
+msgstr "خطأ غير معروف"
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:269
+msgid "Could not open file {filename!r}: {message}"
+msgstr "تعذر فتح الملف {اسم الملف!r}: {رسالة}"
+
+#: venv/lib/python3.10/site-packages/click/parser.py:231
+msgid "Argument {name!r} takes {nargs} values."
+msgstr "الوسيطة {name!r} تأخذ قيم {nargs}."
+
+#: venv/lib/python3.10/site-packages/click/parser.py:413
+msgid "Option {name!r} does not take a value."
+msgstr "الخيار {name!r} لا يأخذ قيمة."
+
+#: venv/lib/python3.10/site-packages/click/parser.py:474
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/click/shell_completion.py:319
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr "إكمال شل غير مدعوم لإصدارات Bash الأقدم من 4.4."
+
+#: venv/lib/python3.10/site-packages/click/shell_completion.py:326
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr "تعذر اكتشاف إصدار Bash ، إكمال shell غير مدعوم."
+
+#: venv/lib/python3.10/site-packages/click/termui.py:158
+msgid "Repeat for confirmation"
+msgstr "كرر للتأكيد"
+
+#: venv/lib/python3.10/site-packages/click/termui.py:174
+msgid "Error: The value you entered was invalid."
+msgstr "خطأ: القيمة التي أدخلتها غير صالحة."
+
+#: venv/lib/python3.10/site-packages/click/termui.py:176
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr "خطأ: {e.message}"
+
+#: venv/lib/python3.10/site-packages/click/termui.py:187
+msgid "Error: The two entered values do not match."
+msgstr "خطأ: القيمتان المدخلتان غير متطابقتين."
+
+#: venv/lib/python3.10/site-packages/click/termui.py:243
+msgid "Error: invalid input"
+msgstr "خطأ: إدخال غير صالح"
+
+#: venv/lib/python3.10/site-packages/click/termui.py:773
+msgid "Press any key to continue..."
+msgstr "اضغط على أي مفتاح للمتابعة..."
+
+#: venv/lib/python3.10/site-packages/click/types.py:266
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+"اختر من بين:\n"
+" {الخيارات}"
+
+#: venv/lib/python3.10/site-packages/click/types.py:298
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:392
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/click/types.py:414
+msgid "{value!r} is not a valid {number_type}."
+msgstr "{value!r} ليس {number_type} صالحا."
+
+#: venv/lib/python3.10/site-packages/click/types.py:470
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr "{value} ليس في النطاق <code>{range}."
+
+#: venv/lib/python3.10/site-packages/click/types.py:611
+msgid "{value!r} is not a valid boolean."
+msgstr "{value!r} ليست منطقية صالحة."
+
+#: venv/lib/python3.10/site-packages/click/types.py:635
+msgid "{value!r} is not a valid UUID."
+msgstr "{value!r} ليس UUID صالحا."
+
+#: venv/lib/python3.10/site-packages/click/types.py:822
+msgid "file"
+msgstr "ملف"
+
+#: venv/lib/python3.10/site-packages/click/types.py:824
+msgid "directory"
+msgstr "دليل"
+
+#: venv/lib/python3.10/site-packages/click/types.py:826
+msgid "path"
+msgstr "مسار"
+
+#: venv/lib/python3.10/site-packages/click/types.py:877
+msgid "{name} {filename!r} does not exist."
+msgstr "{اسم} {اسم الملف!r} غير موجود."
+
+#: venv/lib/python3.10/site-packages/click/types.py:886
+msgid "{name} {filename!r} is a file."
+msgstr "{اسم} {اسم الملف!r} هو ملف."
+
+#: venv/lib/python3.10/site-packages/click/types.py:894
+#, python-brace-format
+msgid "{name} '{filename}' is a directory."
+msgstr "{اسم} \"<code>{اسم الملف}\" هو دليل."
+
+#: venv/lib/python3.10/site-packages/click/types.py:903
+msgid "{name} {filename!r} is not readable."
+msgstr "{اسم} {filename!r} غير قابل للقراءة."
+
+#: venv/lib/python3.10/site-packages/click/types.py:912
+msgid "{name} {filename!r} is not writable."
+msgstr "{اسم} {اسم الملف!r} غير قابل للكتابة."
+
+#: venv/lib/python3.10/site-packages/click/types.py:921
+msgid "{name} {filename!r} is not executable."
+msgstr "{اسم} {filename!r} غير قابل للتنفيذ."
+
+#: venv/lib/python3.10/site-packages/click/types.py:988
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/contrib/sitemaps/apps.py:8
+msgid "Site Maps"
+msgstr "خرائط الموقع"
+
+#: venv/lib/python3.10/site-packages/django/contrib/staticfiles/apps.py:9
+msgid "Static Files"
+msgstr "ملفات ثابتة"
+
+#: venv/lib/python3.10/site-packages/django/contrib/syndication/apps.py:7
+msgid "Syndication"
+msgstr "الترويج"
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: venv/lib/python3.10/site-packages/django/core/paginator.py:30
+msgid "…"
+msgstr "…"
+
+#: venv/lib/python3.10/site-packages/django/core/paginator.py:32
+msgid "That page number is not an integer"
+msgstr "رقم الصفحة هذا ليس عددا صحيحا"
+
+#: venv/lib/python3.10/site-packages/django/core/paginator.py:33
+msgid "That page number is less than 1"
+msgstr "رقم الصفحة أقل من 1"
+
+#: venv/lib/python3.10/site-packages/django/core/paginator.py:34
+msgid "That page contains no results"
+msgstr "لا تحتوي هذه الصفحة على أي نتائج"
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:22
+msgid "Enter a valid value."
+msgstr "أدخل قيمة صالحة."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:70
+msgid "Enter a valid domain name."
+msgstr "أدخل اسم نطاق صالح."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:152
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:768
+msgid "Enter a valid URL."
+msgstr "أدخل عنوان URL صالحا."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:213
+msgid "Enter a valid integer."
+msgstr "أدخل عددا صحيحا صالحا."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:224
+msgid "Enter a valid email address."
+msgstr "أدخل عنوان بريد إلكتروني صالحا."
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: venv/lib/python3.10/site-packages/django/core/validators.py:307
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr "أدخل \"سبيكة\" صالحة تتكون من أحرف أو أرقام أو شرطات سفلية أو واصلات."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:315
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
+" hyphens."
+msgstr ""
+"أدخل \"سبيكة\" صالحة تتكون من أحرف Unicode أو أرقام أو شرطات سفلية أو "
+"واصلات."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:327
+#: venv/lib/python3.10/site-packages/django/core/validators.py:336
+#: venv/lib/python3.10/site-packages/django/core/validators.py:350
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2215
+#, python-format
+msgid "Enter a valid %(protocol)s address."
+msgstr "أدخل عنوان ٪(بروتوكول) صالح."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:329
+msgid "IPv4"
+msgstr "آي بي في 4"
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:338
+#: venv/lib/python3.10/site-packages/django/utils/ipv6.py:30
+msgid "IPv6"
+msgstr "IPv6"
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:352
+msgid "IPv4 or IPv6"
+msgstr "IPv4 أو IPv6"
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:393
+msgid "Enter only digits separated by commas."
+msgstr "أدخل الأرقام مفصولة بفواصل فقط."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:399
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr "تأكد من أن هذه القيمة هي ٪(limit_value)s (هي<code>٪(show_value)s)."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:434
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "تأكد من أن هذه القيمة أقل من أو تساوي ٪(limit_value)s."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:443
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "تأكد من أن هذه القيمة أكبر من أو تساوي ٪(limit_value)s."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:452
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr "تأكد من أن هذه القيمة هي مضاعفات حجم الخطوة٪ (limit_value) s."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:459
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+"تأكد من أن هذه القيمة هي مضاعف لحجم الخطوة٪ (limit_value) s ، بدءا من<code>٪"
+" (الإزاحة) ، على سبيل المثال <code>٪ (الإزاحة) ، <code>٪ (valid_value1) s ، "
+"<code>٪ (valid_value2) s ، وهكذا."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:491
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:509
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:532
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:359
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:398
+msgid "Enter a number."
+msgstr "أدخل رقما."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:534
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:539
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:544
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:615
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+"امتداد الملف \"٪(extension)s\" غير مسموح به. الامتدادات المسموح بها هي: "
+"<code>٪(allowed_extensions)s."
+
+#: venv/lib/python3.10/site-packages/django/core/validators.py:677
+msgid "Null characters are not allowed."
+msgstr "الأحرف الفارغة غير مسموح بها."
+
+#: venv/lib/python3.10/site-packages/django/db/models/base.py:1571
+#: venv/lib/python3.10/site-packages/django/forms/models.py:908
+msgid "and"
+msgstr "و"
+
+#: venv/lib/python3.10/site-packages/django/db/models/base.py:1573
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr "٪(model_name)s مع هذه <code>النسبة ٪(field_labels) موجودة بالفعل."
+
+#: venv/lib/python3.10/site-packages/django/db/models/constraints.py:22
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr "يتم انتهاك القيد \"٪ (الاسم)\"."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:134
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr "القيمة٪ (القيمة) r ليست خيارا صالحا."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:135
+msgid "This field cannot be null."
+msgstr "لا يمكن أن يكون هذا الحقل فارغا."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:136
+msgid "This field cannot be blank."
+msgstr "لا يمكن أن يكون هذا الحقل فارغا."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:137
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr "٪(model_name)s مع هذه <code>النسبة ٪(field_label)s موجودة بالفعل."
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or
+#. 'month'. Eg: "Title must be unique for pub_date year"
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:141
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+"يجب أن تكون ٪(field_label)s فريدة "
+"ل<code>٪(date_field_label)<code>s٪(lookup_type)s."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:180
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr "مجال النوع: ٪ (field_type) ثانية"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1156
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr "يجب أن تكون قيمة \"٪ (القيمة)s\" إما صواب أو خطأ."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1157
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr "يجب أن تكون قيمة \"٪(value)s\" إما صواب أو خطأ أو لا شيء."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1159
+msgid "Boolean (Either True or False)"
+msgstr "منطقي (إما صواب أو خطأ)"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1209
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr "سلسلة (تصل إلى٪ (max_length) s) s)"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1211
+msgid "String (unlimited)"
+msgstr "سلسلة (غير محدودة)"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1320
+msgid "Comma-separated integers"
+msgstr "أعداد صحيحة مفصولة بفواصل"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1421
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+"تحتوي قيمة \"٪(value)s\" على تنسيق تاريخ غير صالح. يجب أن يكون بتنسيق YYYY-"
+"MM-DD."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1425
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1560
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+"تحتوي قيمة \"٪ (value)s\" على التنسيق الصحيح (YYYY-MM-DD) ولكنها تاريخ غير "
+"صالح."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1429
+msgid "Date (without time)"
+msgstr "التاريخ (بدون وقت)"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1556
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
+msgstr ""
+"تحتوي قيمة \"٪ (value)s\" على تنسيق غير صالح. يجب أن يكون بتنسيق YYYY-MM-DD "
+"HH:MM[:SS[.UUUUUUU][TZ]."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1564
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
+msgstr ""
+"تحتوي قيمة \"٪ (value) s\" على التنسيق الصحيح (YYYY-MM-DD HH: MM [: ss "
+"[.uuuuuuu]] [TZ]) ولكنها تاريخ / وقت غير صالح."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1569
+msgid "Date (with time)"
+msgstr "التاريخ (مع الوقت)"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1696
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr "يجب أن تكون قيمة \"٪ (قيمة)s\" رقما عشريا."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1698
+msgid "Decimal number"
+msgstr "رقم عشري"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1859
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
+msgstr ""
+"تحتوي قيمة \"٪ (value)s\" على تنسيق غير صالح. يجب أن يكون بتنسيق [DD] "
+"[[HH:]MM:]ss[.uuuuuu]."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1863
+msgid "Duration"
+msgstr "مدة"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1915
+msgid "Email address"
+msgstr "عنوان البريد الإلكتروني"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1940
+msgid "File path"
+msgstr "مسار الملف"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2018
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr "يجب أن تكون قيمة \"٪ (القيمة)\" عائمة."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2020
+msgid "Floating point number"
+msgstr "رقم الفاصلة العائمة"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2060
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr "يجب أن تكون قيمة \"٪(value)s\" عددا صحيحا."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2062
+msgid "Integer"
+msgstr "العدد الصحيح"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2158
+msgid "Big (8 byte) integer"
+msgstr "عدد صحيح كبير (8 بايت)"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2175
+msgid "Small integer"
+msgstr "عدد صحيح صغير"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2183
+msgid "IPv4 address"
+msgstr "عنوان IPv4"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2214
+msgid "IP address"
+msgstr "عنوان بروتوكول الإنترنت"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2305
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2306
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr "يجب أن تكون قيمة \"٪ (القيمة)s\" إما لا شيء أو صواب أو خطأ."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2308
+msgid "Boolean (Either True, False or None)"
+msgstr "منطقي (إما صواب أو خطأ أو لا شيء)"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2359
+msgid "Positive big integer"
+msgstr "عدد صحيح كبير موجب"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2374
+msgid "Positive integer"
+msgstr "عدد صحيح موجب"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2389
+msgid "Positive small integer"
+msgstr "عدد صحيح صغير موجب"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2405
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr "سبيكة (تصل إلى٪ (max_length) ثانية)"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2441
+msgid "Text"
+msgstr "نص"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2521
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+"تحتوي قيمة \"٪ (value)s\" على تنسيق غير صالح. يجب أن يكون بتنسيق HH: MM [: "
+"ss[.uuuuuuu]]."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2525
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+"تحتوي قيمة \"٪ (value) s\" على التنسيق الصحيح (HH: MM [: ss[.uuuuuu]]) ولكنه"
+" وقت غير صالح."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2529
+msgid "Time"
+msgstr "الوقت"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2637
+msgid "URL"
+msgstr "الرابط"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2661
+msgid "Raw binary data"
+msgstr "البيانات الثنائية الخام"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2726
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr "\"٪ (قيمة)s\" ليست UUID صالحة."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:2728
+msgid "Universally unique identifier"
+msgstr "معرف فريد عالميا"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/files.py:244
+msgid "File"
+msgstr "ملف"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/files.py:420
+msgid "Image"
+msgstr "صورة"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/json.py:24
+msgid "A JSON object"
+msgstr "كائن JSON"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/json.py:26
+msgid "Value must be valid JSON."
+msgstr "يجب أن تكون القيمة JSON صالحة."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/related.py:932
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr "مثيل ٪(model) s مع <code>٪(حقل)s٪(value)r غير موجود."
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/related.py:934
+msgid "Foreign Key (type determined by related field)"
+msgstr "المفتاح الخارجي (النوع الذي يحدده حقل ذي صلة)"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/related.py:1228
+msgid "One-to-one relationship"
+msgstr "علاقة فردية"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/related.py:1285
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr "علاقة٪ (من) s-<code>٪ (إلى) s"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/related.py:1287
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr "٪ (من) s-<code>٪ (إلى) ق العلاقات"
+
+#: venv/lib/python3.10/site-packages/django/db/models/fields/related.py:1335
+msgid "Many-to-many relationship"
+msgstr "علاقة متعدد إلى متعدد"
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the
+#. label
+#: venv/lib/python3.10/site-packages/django/forms/boundfield.py:185
+msgid ":?.!"
+msgstr ":?.!"
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:95
+msgid "This field is required."
+msgstr "هذا الحقل مطلوب."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:308
+msgid "Enter a whole number."
+msgstr "أدخل عددا صحيحا."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:479
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:1260
+msgid "Enter a valid date."
+msgstr "أدخل تاريخا صالحا."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:502
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:1261
+msgid "Enter a valid time."
+msgstr "أدخل وقتا صالحا."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:529
+msgid "Enter a valid date/time."
+msgstr "أدخل تاريخا/وقتا صالحا."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:563
+msgid "Enter a valid duration."
+msgstr "أدخل مدة صالحة."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:564
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr "يجب أن يكون عدد الأيام بين {min_days} و <code>{max_days}."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:633
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr "لم يتم تقديم أي ملف. تحقق من نوع الترميز في النموذج."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:634
+msgid "No file was submitted."
+msgstr "لم يتم تقديم أي ملف."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:635
+msgid "The submitted file is empty."
+msgstr "الملف المرسل فارغ."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:637
+#, python-format
+msgid ""
+"Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:642
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr "يرجى إما إرسال ملف أو تحديد مربع الاختيار الواضح ، وليس كلاهما."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:710
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+"قم بتحميل صورة صالحة. لم يكن الملف الذي قمت بتحميله صورة أو صورة تالفة."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:882
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:968
+#: venv/lib/python3.10/site-packages/django/forms/models.py:1592
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "حدد خيارا صالحا. ٪ (القيمة) ليست واحدة من الخيارات المتاحة."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:970
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:1089
+#: venv/lib/python3.10/site-packages/django/forms/models.py:1590
+msgid "Enter a list of values."
+msgstr "أدخل قائمة بالقيم."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:1090
+msgid "Enter a complete value."
+msgstr "أدخل قيمة كاملة."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:1329
+msgid "Enter a valid UUID."
+msgstr "أدخل UUID صالحا."
+
+#: venv/lib/python3.10/site-packages/django/forms/fields.py:1359
+msgid "Enter a valid JSON."
+msgstr "أدخل JSON صالحا."
+
+#. Translators: This is the default suffix added to form field labels
+#: venv/lib/python3.10/site-packages/django/forms/forms.py:94
+msgid ":"
+msgstr ":"
+
+#: venv/lib/python3.10/site-packages/django/forms/forms.py:230
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr "(الحقل المخفي٪ (الاسم) s) <code>٪ (خطأ) ق"
+
+#: venv/lib/python3.10/site-packages/django/forms/formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+"بيانات ManagementForm مفقودة أو تم العبث بها. الحقول المفقودة: "
+"٪(field_names)s. قد تحتاج إلى تقديم تقرير خطأ إذا استمرت المشكلة."
+
+#: venv/lib/python3.10/site-packages/django/forms/formsets.py:65
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/forms/formsets.py:70
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/forms/formsets.py:484
+#: venv/lib/python3.10/site-packages/django/forms/formsets.py:491
+msgid "Order"
+msgstr "ترتيب"
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:901
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr "يرجى تصحيح البيانات المكررة ل ٪(field)s."
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:906
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr "يرجى تصحيح البيانات المكررة ل ٪(field)s ، والتي يجب أن تكون فريدة."
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:913
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+"يرجى تصحيح البيانات المكررة ل ٪(field_name)s التي يجب أن تكون فريدة ل "
+"<code>٪(lookup)s في <code>٪(date_field)s."
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:922
+msgid "Please correct the duplicate values below."
+msgstr "يرجى تصحيح القيم المكررة أدناه."
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:1359
+msgid "The inline value did not match the parent instance."
+msgstr "لم تتطابق القيمة المضمنة مع المثيل الأصل."
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:1450
+msgid ""
+"Select a valid choice. That choice is not one of the available choices."
+msgstr "حدد خيارا صالحا. هذا الاختيار ليس أحد الخيارات المتاحة."
+
+#: venv/lib/python3.10/site-packages/django/forms/models.py:1594
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr "\"٪(pk)s\" ليست قيمة صالحة."
+
+#: venv/lib/python3.10/site-packages/django/forms/utils.py:227
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+"لا يمكن تفسير ٪(datetime)s في المنطقة <code>الزمنية٪(current_timezone)s؛ قد "
+"يكون غامضا أو قد لا يكون موجودا."
+
+#: venv/lib/python3.10/site-packages/django/forms/widgets.py:461
+msgid "Clear"
+msgstr "واضح"
+
+#: venv/lib/python3.10/site-packages/django/forms/widgets.py:462
+msgid "Currently"
+msgstr "حاليا"
+
+#: venv/lib/python3.10/site-packages/django/forms/widgets.py:463
+msgid "Change"
+msgstr "تغيير"
+
+#: venv/lib/python3.10/site-packages/django/forms/widgets.py:800
+msgid "Unknown"
+msgstr "مجهول"
+
+#: venv/lib/python3.10/site-packages/django/forms/widgets.py:801
+msgid "Yes"
+msgstr "نعم"
+
+#: venv/lib/python3.10/site-packages/django/forms/widgets.py:802
+msgid "No"
+msgstr "لا"
+
+#. Translators: Please do not add spaces around commas.
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:873
+msgid "yes,no,maybe"
+msgstr "نعم ، لا ، ربما"
+
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:903
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:920
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:922
+#, python-format
+msgid "%s KB"
+msgstr "٪s KB"
+
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:924
+#, python-format
+msgid "%s MB"
+msgstr "٪s MB"
+
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:926
+#, python-format
+msgid "%s GB"
+msgstr "٪s GB"
+
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:928
+#, python-format
+msgid "%s TB"
+msgstr "٪s السل"
+
+#: venv/lib/python3.10/site-packages/django/template/defaultfilters.py:930
+#, python-format
+msgid "%s PB"
+msgstr "٪s PB"
+
+#: venv/lib/python3.10/site-packages/django/utils/dateformat.py:74
+msgid "p.m."
+msgstr "مساء"
+
+#: venv/lib/python3.10/site-packages/django/utils/dateformat.py:75
+msgid "a.m."
+msgstr "صباحا"
+
+#: venv/lib/python3.10/site-packages/django/utils/dateformat.py:80
+msgid "PM"
+msgstr "م"
+
+#: venv/lib/python3.10/site-packages/django/utils/dateformat.py:81
+msgid "AM"
+msgstr "ص"
+
+#: venv/lib/python3.10/site-packages/django/utils/dateformat.py:153
+msgid "midnight"
+msgstr "منتصف الليل"
+
+#: venv/lib/python3.10/site-packages/django/utils/dateformat.py:155
+msgid "noon"
+msgstr "الظهيرة"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:7
+#: venv/lib/python3.10/site-packages/tornado/locale.py:295
+msgid "Monday"
+msgstr "الاثنين"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:8
+#: venv/lib/python3.10/site-packages/tornado/locale.py:296
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:9
+#: venv/lib/python3.10/site-packages/tornado/locale.py:297
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:10
+#: venv/lib/python3.10/site-packages/tornado/locale.py:298
+msgid "Thursday"
+msgstr "الخميس"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:11
+#: venv/lib/python3.10/site-packages/tornado/locale.py:299
+msgid "Friday"
+msgstr "الجمعة"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:12
+#: venv/lib/python3.10/site-packages/tornado/locale.py:300
+msgid "Saturday"
+msgstr "السبت"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:13
+#: venv/lib/python3.10/site-packages/tornado/locale.py:301
+msgid "Sunday"
+msgstr "الأحد"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:16
+msgid "Mon"
+msgstr "الاثنين"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:17
+msgid "Tue"
+msgstr "الثلاثاء"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:18
+msgid "Wed"
+msgstr "الاربعاء"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:19
+msgid "Thu"
+msgstr "الخميس"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:20
+msgid "Fri"
+msgstr "الجمعه"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:21
+msgid "Sat"
+msgstr "السبت"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:22
+msgid "Sun"
+msgstr "الأحد"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:39
+msgid "jan"
+msgstr "يناير"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:40
+msgid "feb"
+msgstr "فبراير"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:41
+msgid "mar"
+msgstr "مارس"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:42
+msgid "apr"
+msgstr "ابريل"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:43
+msgid "may"
+msgstr "مايو"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:44
+msgid "jun"
+msgstr "يونيو"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:45
+msgid "jul"
+msgstr "يوليو"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:46
+msgid "aug"
+msgstr "اغسطس"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:47
+msgid "sep"
+msgstr "سبتمبر"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:48
+msgid "oct"
+msgstr "اكتوبر"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:49
+msgid "nov"
+msgstr "نوفمبر"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:50
+msgid "dec"
+msgstr "ديسمبر"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr "يناير."
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr "فبراير."
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:55
+msgctxt "abbrev. month"
+msgid "March"
+msgstr "مارس"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr "أبريل"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr "مايو"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr "يونيو"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr "يوليو"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr "اغسطس."
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr "سبتمبر."
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr "اكتوبر."
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr "نوفمبر."
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr "ديسمبر."
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr "يناير"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr "فبراير"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:69
+msgctxt "alt. month"
+msgid "March"
+msgstr "مارس"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr "أبريل"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr "مايو"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr "يونيو"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr "يوليو"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr "أغسطس"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:75
+msgctxt "alt. month"
+msgid "September"
+msgstr "سبتمبر"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr "أكتوبر"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:77
+msgctxt "alt. month"
+msgid "November"
+msgstr "نوفمبر"
+
+#: venv/lib/python3.10/site-packages/django/utils/dates.py:78
+msgctxt "alt. month"
+msgid "December"
+msgstr "ديسمبر"
+
+#: venv/lib/python3.10/site-packages/django/utils/ipv6.py:8
+msgid "This is not a valid IPv6 address."
+msgstr "هذا ليس عنوان IPv6 صالح."
+
+#: venv/lib/python3.10/site-packages/django/utils/text.py:75
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr "٪(truncated_text)s..."
+
+#. Translators: This string is used as a separator between list elements
+#: venv/lib/python3.10/site-packages/django/utils/text.py:305
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:135
+msgid ", "
+msgstr ", "
+
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:8
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:9
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:10
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:29
+msgid "Forbidden"
+msgstr "ممنوع"
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:30
+msgid "CSRF verification failed. Request aborted."
+msgstr "فشل التحقق من CSRF. تم إحباط الطلب."
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:34
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+"أنت ترى هذه الرسالة لأن موقع HTTPS هذا يتطلب إرسال \"رأس إحالة\" بواسطة "
+"متصفح الويب الخاص بك ، ولكن لم يتم إرسال أي منها. هذا العنوان مطلوب لأسباب "
+"أمنية ، لضمان عدم اختطاف متصفحك من قبل أطراف ثالثة."
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:40
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+"إذا قمت بتكوين متصفحك لتعطيل رؤوس \"الإحالة\" ، فيرجى إعادة تمكينها ، على "
+"الأقل لهذا الموقع ، أو لاتصالات HTTPS ، أو لطلبات \"نفس الأصل\"."
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:45
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
+" including the “Referrer-Policy: no-referrer” header, please remove them. "
+"The CSRF protection requires the “Referer” header to do strict referer "
+"checking. If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+"إذا كنت تستخدم العلامة <meta name=\"referrer\" content=\"no-referrer\"> أو "
+"تتضمن العنوان \"Referrer-Policy: no-referrer\"، فيرجى إزالتها. تتطلب حماية "
+"CSRF رأس \"المحيل\" لإجراء فحص صارم للمحيل. إذا كنت قلقا بشأن الخصوصية ، "
+"فاستخدم بدائل مثل <a rel=\"noreferrer\" ...> للروابط إلى مواقع الجهات "
+"الخارجية."
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:54
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+"أنت ترى هذه الرسالة لأن هذا الموقع يتطلب ملف تعريف ارتباط CSRF عند إرسال "
+"النماذج. ملف تعريف الارتباط هذا مطلوب لأسباب أمنية ، لضمان عدم اختطاف متصفحك"
+" من قبل أطراف ثالثة."
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:60
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+"إذا قمت بتكوين متصفحك لتعطيل ملفات تعريف الارتباط ، فيرجى إعادة تمكينها ، "
+"على الأقل لهذا الموقع ، أو لطلبات \"نفس الأصل\"."
+
+#: venv/lib/python3.10/site-packages/django/views/csrf.py:66
+msgid "More information is available with DEBUG=True."
+msgstr "يتوفر مزيد من المعلومات مع DEBUG = True."
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:44
+msgid "No year specified"
+msgstr "لم يتم تحديد سنة"
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:64
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:115
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:214
+msgid "Date out of range"
+msgstr "التاريخ خارج النطاق"
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:94
+msgid "No month specified"
+msgstr "لم يتم تحديد شهر"
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:147
+msgid "No day specified"
+msgstr "لم يتم تحديد يوم"
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:194
+msgid "No week specified"
+msgstr "لم يتم تحديد أسبوع"
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:349
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:380
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr "لا تتوفر ٪(verbose_name_plural)s"
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:652
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
+msgstr ""
+"٪(verbose_name_plural) المستقبلية غير متوفرة لأن "
+"<code>٪(class_name)s.allow_future خطأ."
+
+#: venv/lib/python3.10/site-packages/django/views/generic/dates.py:692
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr "سلسلة التاريخ غير صالحة \"٪ (datestr) s\" تنسيق معين \"<code>٪ (format) s\""
+
+#: venv/lib/python3.10/site-packages/django/views/generic/detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr "لم يتم العثور على ٪(verbose_name) s مطابقة للاستعلام"
+
+#: venv/lib/python3.10/site-packages/django/views/generic/list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr "الصفحة ليست \"الأخيرة\" ، ولا يمكن تحويلها إلى int."
+
+#: venv/lib/python3.10/site-packages/django/views/generic/list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr "صفحة غير صالحة (٪(page_number)s): <code>٪(رسالة)s"
+
+#: venv/lib/python3.10/site-packages/django/views/generic/list.py:169
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr "قائمة فارغة و \"٪ (class_name) s.allow_empty\" خطأ."
+
+#: venv/lib/python3.10/site-packages/django/views/static.py:49
+msgid "Directory indexes are not allowed here."
+msgstr "فهارس الدليل غير مسموح بها هنا."
+
+#: venv/lib/python3.10/site-packages/django/views/static.py:51
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr "\"٪ (مسار)s\" غير موجود"
+
+#: venv/lib/python3.10/site-packages/django/views/static.py:68
+#: venv/lib/python3.10/site-packages/django/views/templates/directory_index.html:8
+#: venv/lib/python3.10/site-packages/django/views/templates/directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr "فهرس٪ (الدليل)"
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:7
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:204
+msgid "The install worked successfully! Congratulations!"
+msgstr "عمل التثبيت بنجاح! مبروك!"
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+"View <a href=\"https://docs.djangoproject.com/en/٪(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django "
+"<code>٪(version)s"
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:208
+#, python-format
+msgid ""
+"You are seeing this page because <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
+"and you have not configured any URLs."
+msgstr ""
+"أنت ترى هذه الصفحة لأن <a "
+"href=\"https://docs.djangoproject.com/en/٪(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> موجود في ملف الإعدادات ولم"
+" تقم بتكوين أي عناوين URL."
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:217
+msgid "Django Documentation"
+msgstr "وثائق جانغو"
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:218
+msgid "Topics, references, &amp; how-to’s"
+msgstr "المواضيع والمراجع و كيف"
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:226
+msgid "Tutorial: A Polling App"
+msgstr "البرنامج التعليمي: تطبيق الاقتراع"
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:227
+msgid "Get started with Django"
+msgstr "ابدأ مع جانغو"
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:235
+msgid "Django Community"
+msgstr "مجتمع جانغو"
+
+#: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:236
+msgid "Connect, get help, or contribute"
+msgstr "الاتصال أو الحصول على المساعدة أو المساهمة"
+
+#: venv/lib/python3.10/site-packages/tornado/locale.py:377
+msgid "1 second ago"
+msgstr "1 ثانية منذ"
+
+#: venv/lib/python3.10/site-packages/tornado/locale.py:383
+msgid "1 minute ago"
+msgstr "منذ 1 دقيقة"
+
+#: venv/lib/python3.10/site-packages/tornado/locale.py:391
+#, python-format
+msgid "%(time)s"
+msgstr "٪ (الوقت)"
+
+#: venv/lib/python3.10/site-packages/tornado/locale.py:393
+msgid "yesterday"
+msgstr "أمس"
+
+#: venv/lib/python3.10/site-packages/tornado/locale.py:393
+#, python-format
+msgid "yesterday at %(time)s"
+msgstr "أمس في ٪ (الوقت) ق"
+
+#: venv/lib/python3.10/site-packages/tornado/locale.py:395
+#, python-format
+msgid "%(weekday)s"
+msgstr "٪ (أيام الأسبوع)"
+
+#: venv/lib/python3.10/site-packages/tornado/locale.py:395
+#, python-format
+msgid "%(weekday)s at %(time)s"
+msgstr "٪ (أيام الأسبوع) في <code>٪ (الوقت)"
+
+#: venv/lib/python3.10/site-packages/tornado/locale.py:398
+#: venv/lib/python3.10/site-packages/tornado/locale.py:451
+#, python-format
+msgid "%(month_name)s %(day)s"
+msgstr "٪ (month_name) ق <code>٪ (يوم)"
+
+#: venv/lib/python3.10/site-packages/tornado/locale.py:400
+#, python-format
+msgid "%(month_name)s %(day)s at %(time)s"
+msgstr "٪ (month_name) s<code>٪ (يوم) s في <code>٪ (الوقت) ق"
+
+#: venv/lib/python3.10/site-packages/tornado/locale.py:405
+#, python-format
+msgid "%(month_name)s %(day)s, %(year)s"
+msgstr "٪ (month_name) s <code>٪ (يوم) ق ، <code>٪ (سنة) ثانية"
+
+#: venv/lib/python3.10/site-packages/tornado/locale.py:407
+#, python-format
+msgid "%(month_name)s %(day)s, %(year)s at %(time)s"
+msgstr ""
+"٪ (month_name) s<code>٪ (يوم) s ، <code>٪ (سنة) s في <code>٪ (الوقت) s"
+
+#: venv/lib/python3.10/site-packages/tornado/locale.py:445
+#, python-format
+msgid "%(weekday)s, %(month_name)s %(day)s"
+msgstr "٪ (أيام الأسبوع) ، <code>٪ (month_name) <code>s ٪ (يوم)"
+
+#: venv/lib/python3.10/site-packages/tornado/locale.py:468
+#, python-format
+msgid "%(commas)s and %(last)s"
+msgstr "٪ (فواصل) ق و <code>٪ (الأخير) ق"
+
+#: venv/lib/python3.10/site-packages/tornado/test/locale_test.py:68
+msgctxt "law"
+msgid "right"
+msgstr "يمين"
+
+#: venv/lib/python3.10/site-packages/tornado/test/locale_test.py:69
+msgctxt "good"
+msgid "right"
+msgstr "يمين"
+
+#: venv/lib/python3.10/site-packages/tornado/test/locale_test.py:70
+#: venv/lib/python3.10/site-packages/tornado/test/locale_test.py:72
+msgctxt "organization"
+msgid "club"
+msgstr "ناد"
+
+#: venv/lib/python3.10/site-packages/tornado/test/locale_test.py:74
+#: venv/lib/python3.10/site-packages/tornado/test/locale_test.py:75
+msgctxt "stick"
+msgid "club"
+msgstr "ناد"

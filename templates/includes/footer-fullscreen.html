@@ -1,0 +1,21 @@
+{% load static i18n %}
+<footer class="footer pt-3">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-12 mb-2">
+        <div class="text-center text-xs">
+          <ul class="nav justify-content-center">
+            <li class="nav-item"><a class="nav-link text-muted" href="#home">{% trans "Home" %}</a></li>
+            <li class="nav-item"><a class="nav-link text-muted" href="#about">{% trans "About" %}</a></li>
+            <li class="nav-item"><a class="nav-link text-muted" href="#service">{% trans "Facilities" %}</a></li>
+            <li class="nav-item"><a class="nav-link text-muted" href="{% url 'app:privacypolicy' %}">{% trans "Privacy Policy" %}</a></li>
+            <li class="nav-item"><a class="nav-link text-muted" href="{% url 'app:TermsofService' %}">{% trans "Terms of Service" %}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="text-center text-xs pb-3">{% trans "&copy; Dent i-Delil Clinic - Design by Lotfi Kanouni" %}</div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,52 @@
+{% extends 'layouts/dashbase.html' %}
+{% load i18n %}
+{% load static i18n %}
+{% load crispy_forms_tags %}
+
+{% block stylesheets %}
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="card shadow-lg mx-4">
+    <div class="card-body p-3">
+        <div class="row gx-4">
+            <div class="col-auto">
+                <div class="avatar avatar-xl position-relative">
+                    {% if profile_picture %}
+                        <img src="{{ profile_picture.file.url }}" alt="{% trans 'Profile Picture' %}" class="w-100 border-radius-lg shadow-sm">
+                    {% else %}
+                        <img src="{% static 'default.jpg' %}" alt="{% trans 'Default Profile Picture' %}" class="w-100 border-radius-lg shadow-sm">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-auto my-auto">
+                <div class="h-100">
+                    <h5 class="mb-1">{{ user.first_name }} {{ user.last_name }}</h5>
+                    <p class="mb-0 font-weight-bold text-sm">{{ user.job_title }}</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
+                <div class="nav-wrapper position-relative end-0">
+                    <div class="mt-4">
+                         <a href="{% url 'employee:request_dashboard' %}" class="btn btn-primary">Back to Request dashboard</a>
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <h3>Administrative Request: Advance Payment</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ wizard.management_form }}
+        {{ wizard.form|crispy }} <!-- Crispy form rendering -->
+
+        <div class="mt-4">
+            <button type="submit" class="btn btn-primary">Next</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

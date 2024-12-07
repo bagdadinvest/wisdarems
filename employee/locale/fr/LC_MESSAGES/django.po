@@ -1,0 +1,372 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-07 13:05+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: .\employee\models.py:20
+msgid "Executive and Management"
+msgstr ""
+
+#: .\employee\models.py:21
+msgid "Human Resources Manager"
+msgstr ""
+
+#: .\employee\models.py:22
+msgid "Administrative Officer"
+msgstr ""
+
+#: .\employee\models.py:23
+msgid "Chief Marketing Officer"
+msgstr ""
+
+#: .\employee\models.py:25
+msgid "Creative and Media"
+msgstr ""
+
+#: .\employee\models.py:26
+msgid "Journalist"
+msgstr ""
+
+#: .\employee\models.py:27
+msgid "Proofreader"
+msgstr ""
+
+#: .\employee\models.py:28
+msgid "Video Editor"
+msgstr ""
+
+#: .\employee\models.py:29
+msgid "Graphic Designer"
+msgstr ""
+
+#: .\employee\models.py:30
+msgid "Content Writer"
+msgstr ""
+
+#: .\employee\models.py:31
+msgid "Voiceover Artist"
+msgstr ""
+
+#: .\employee\models.py:33
+msgid "Technical and IT"
+msgstr ""
+
+#: .\employee\models.py:34
+msgid "Software Developer"
+msgstr ""
+
+#: .\employee\models.py:35
+msgid "Authentication Supervisor"
+msgstr ""
+
+#: .\employee\models.py:37
+msgid "Support and Coordination"
+msgstr ""
+
+#: .\employee\models.py:38
+msgid "Executive Secretary"
+msgstr ""
+
+#: .\employee\models.py:39
+msgid "Logistics Coordinator"
+msgstr ""
+
+#: .\employee\models.py:40
+msgid "Project Coordinator"
+msgstr ""
+
+#: .\employee\models.py:41
+msgid "Executive Assistant"
+msgstr ""
+
+#: .\employee\models.py:43
+msgid "Compliance and Quality Assurance"
+msgstr ""
+
+#: .\employee\models.py:44
+msgid "Internal Auditor"
+msgstr ""
+
+#: .\employee\models.py:46
+msgid "Maintenance and Facility"
+msgstr ""
+
+#: .\employee\models.py:47
+msgid "Janitorial Staff"
+msgstr ""
+
+#: .\employee\models.py:58
+msgid "January"
+msgstr ""
+
+#: .\employee\models.py:58
+msgid "February"
+msgstr ""
+
+#: .\employee\models.py:58
+msgid "March"
+msgstr ""
+
+#: .\employee\models.py:58
+msgid "April"
+msgstr ""
+
+#: .\employee\models.py:58
+msgid "May"
+msgstr ""
+
+#: .\employee\models.py:58
+msgid "June"
+msgstr ""
+
+#: .\employee\models.py:58
+msgid "July"
+msgstr ""
+
+#: .\employee\models.py:58
+msgid "August"
+msgstr ""
+
+#: .\employee\models.py:58
+msgid "September"
+msgstr ""
+
+#: .\employee\models.py:58
+msgid "October"
+msgstr ""
+
+#: .\employee\models.py:58
+msgid "November"
+msgstr ""
+
+#: .\employee\models.py:58
+msgid "December"
+msgstr ""
+
+#: .\employee\models.py:71
+msgid "Full Name"
+msgstr ""
+
+#: .\employee\models.py:72
+msgid "Nationality"
+msgstr ""
+
+#: .\employee\models.py:73
+msgid "Job Title"
+msgstr ""
+
+#: .\employee\models.py:74
+msgid "Department"
+msgstr ""
+
+#: .\employee\models.py:75
+msgid "Email"
+msgstr ""
+
+#: .\employee\models.py:78
+msgid "Enter a valid phone number."
+msgstr ""
+
+#: .\employee\models.py:79
+msgid "Phone Number"
+msgstr ""
+
+#: .\employee\models.py:81
+msgid "Start Date"
+msgstr ""
+
+#: .\employee\models.py:82
+msgid "Salary"
+msgstr ""
+
+#: .\employee\models.py:83
+msgid "Bank Account Number"
+msgstr ""
+
+#: .\employee\models.py:84
+msgid "Account Holder"
+msgstr ""
+
+#: .\employee\models.py:85
+msgid "Address"
+msgstr ""
+
+#: .\employee\models.py:86
+msgid "Slug"
+msgstr ""
+
+#: .\employee\models.py:87 .\employee\models.py:270
+msgid "Notes"
+msgstr ""
+
+#: .\employee\models.py:158
+msgid "Profile picture must be in jpg, jpeg, or png format."
+msgstr ""
+
+#: .\employee\models.py:163
+msgid "CV must be in pdf, doc, docx, jpg, jpeg, or png format."
+msgstr ""
+
+#: .\employee\models.py:168
+msgid "Document must be in pdf, jpg, jpeg, or png format."
+msgstr ""
+
+#: .\employee\models.py:182 .\employee\models.py:235 .\employee\models.py:252
+#: .\employee\models.py:266 .\employee\models.py:278
+msgid "Employee"
+msgstr ""
+
+#: .\employee\models.py:183
+msgid "Workdays"
+msgstr ""
+
+#: .\employee\models.py:184 .\employee\models.py:239
+msgid "Overtime Hours"
+msgstr ""
+
+#: .\employee\models.py:185
+msgid "Absence Days"
+msgstr ""
+
+#: .\employee\models.py:186 .\employee\models.py:238
+msgid "Deductions"
+msgstr ""
+
+#: .\employee\models.py:236
+msgid "Base Salary"
+msgstr ""
+
+#: .\employee\models.py:237
+msgid "Bonuses"
+msgstr ""
+
+#: .\employee\models.py:240
+msgid "Overtime Pay"
+msgstr ""
+
+#: .\employee\models.py:241
+msgid "Total Salary"
+msgstr ""
+
+#: .\employee\models.py:253
+msgid "Payment Date"
+msgstr ""
+
+#: .\employee\models.py:254
+msgid "Payment Method"
+msgstr ""
+
+#: .\employee\models.py:255 .\employee\models.py:269
+msgid "Status"
+msgstr ""
+
+#: .\employee\models.py:267 .\employee\models.py:314
+msgid "Request Date"
+msgstr ""
+
+#: .\employee\models.py:268
+msgid "Amount"
+msgstr ""
+
+#: .\employee\models.py:279
+msgid "Notice ID"
+msgstr ""
+
+#: .\employee\models.py:280
+msgid "Title"
+msgstr ""
+
+#: .\employee\models.py:281
+msgid "Description"
+msgstr ""
+
+#: .\employee\models.py:282
+msgid "Publish Date"
+msgstr ""
+
+#: .\employee\models.py:288
+msgid "Notice"
+msgstr ""
+
+#: .\employee\models.py:289
+msgid "Notices"
+msgstr ""
+
+#: .\employee\models.py:294
+msgid "Assignment ID"
+msgstr ""
+
+#: .\employee\models.py:295
+msgid "Assigner"
+msgstr ""
+
+#: .\employee\models.py:296
+msgid "Work Details"
+msgstr ""
+
+#: .\employee\models.py:297
+msgid "Assign Date"
+msgstr ""
+
+#: .\employee\models.py:298
+msgid "Due Date"
+msgstr ""
+
+#: .\employee\models.py:299
+msgid "Tasker"
+msgstr ""
+
+#: .\employee\models.py:302
+#, python-format
+msgid "Assignment by %(assigner)s to %(tasker)s"
+msgstr ""
+
+#: .\employee\models.py:305
+msgid "Work Assignment"
+msgstr ""
+
+#: .\employee\models.py:306
+msgid "Work Assignments"
+msgstr ""
+
+#: .\employee\models.py:311
+msgid "Request ID"
+msgstr ""
+
+#: .\employee\models.py:312
+msgid "Requester"
+msgstr ""
+
+#: .\employee\models.py:313
+msgid "Request Message"
+msgstr ""
+
+#: .\employee\models.py:315
+msgid "Destination Employee"
+msgstr ""
+
+#: .\employee\models.py:318
+#, python-format
+msgid "Request by %(requester)s"
+msgstr ""
+
+#: .\employee\models.py:321
+msgid "Request"
+msgstr ""
+
+#: .\employee\models.py:322
+msgid "Requests"
+msgstr ""

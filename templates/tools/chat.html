@@ -1,0 +1,19 @@
+<div class="chat-container">
+    <div id="chat-window" style="height: 200px; overflow-y: auto;"></div>
+    <input type="text" id="chat-input" placeholder="Type your message here..." class="form-control" />
+    <button class="btn btn-primary mt-2" onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+    var chatSocket = new WebSocket('ws://your-server-url/chat/');
+    chatSocket.onmessage = function(event) {
+        var messages = document.getElementById('chat-window');
+        messages.innerHTML += '<p>' + event.data + '</p>';
+    };
+
+    function sendMessage() {
+        var input = document.getElementById('chat-input');
+        chatSocket.send(input.value);
+        input.value = '';
+    }
+</script>

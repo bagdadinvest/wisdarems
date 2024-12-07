@@ -1,0 +1,13 @@
+<h2>Employee Work Schedules</h2>
+<table>
+  <tr><th>Employee</th><th>Actions</th></tr>
+  {% for schedule in schedules %}
+    <tr>
+      <td>{{ schedule.employee }}</td>
+      <td>
+        <a href="{% url 'edit-schedule' schedule.id %}">Edit</a> | 
+        <a href="{% url 'delete-schedule' schedule.id %}" onclick="return confirm('Are you sure?')">Delete</a>
+      </td>
+    </tr>
+  {% endfor %}
+</table>

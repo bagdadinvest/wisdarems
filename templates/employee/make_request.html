@@ -1,0 +1,60 @@
+
+{% load i18n %}
+{% load static i18n %}
+
+<div class="container">
+    <h2>{{ _("Make a Request") }}</h2>
+
+    <form method="POST" enctype="multipart/form-data" id="requestForm">
+        {% csrf_token %}
+
+        <!-- Select the Request Type -->
+        <div class="mb-3">
+            <label for="requestType" class="form-label">{{ _("Request Type") }}</label>
+            <select id="requestType" name="request_type" class="form-select">
+                <option value="">{{ _("Select Request Type") }}</option>
+                <option value="administrative">{{ _("Administrative Request") }}</option>
+                <option value="work_assignment">{{ _("Work Assignment Request") }}</option>
+            </select>
+        </div>
+
+        <!-- Administrative Request Form -->
+        <div id="administrativeForm" style="display:none;">
+            {{ admin_form.as_p }}
+        </div>
+
+        <!-- Work Assignment Request Form -->
+        <div id="workAssignmentForm" style="display:none;">
+            {{ work_assignment_form.as_p }}
+        </div>
+
+        <button type="submit" class="btn btn-success">{{ _("Submit Request") }}</button>
+    </form>
+</div>
+
+<!-- JS to dynamically show/hide forms -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const requestType = document.getElementById('requestType');
+        const administrativeForm = document.getElementById('administrativeForm');
+        const workAssignmentForm = document.getElementById('workAssignmentForm');
+
+        function updateFormVisibility() {
+            if (requestType.value === "administrative") {
+                administrativeForm.style.display = "block";
+                workAssignmentForm.style.display = "none";
+            } else if (requestType.value === "work_assignment") {
+                administrativeForm.style.display = "none";
+                workAssignmentForm.style.display = "block";
+            } else {
+                administrativeForm.style.display = "none";
+                workAssignmentForm.style.display = "none";
+            }
+        }
+
+        updateFormVisibility(); // Initial check
+
+        requestType.addEventListener('change', updateFormVisibility);
+    });
+</script>
+

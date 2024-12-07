@@ -1,0 +1,183 @@
+{% extends 'layouts/dashbase.html' %}
+{% load static i18n %}
+{% block title %}WISDAR | All Employees{% endblock %}
+{% block content %}
+
+{% block stylesheets %}
+
+<style>
+    .grip {
+        width: 5px;
+        height: 100%;
+        background-color: #ccc;
+        cursor: col-resize;
+    }
+
+    .dragging .grip {
+        background-color: #888;
+    }
+
+    .truncate {
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .truncate:hover {
+        cursor: pointer;
+    }
+</style>
+{% endblock stylesheets %}
+
+<!-- Add jQuery if not already included -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Add ColResizable plugin -->
+
+<!-- Add DataTables -->
+
+<script>
+    $(document).ready(function() {
+        // Initialize DataTables with individual column search
+        var table = $('#employeeTable').DataTable({
+            initComplete: function () {
+                // Apply column-specific search for each column with a text input
+                this.api().columns().every(function () {
+                    var column = this;
+                    var input = $('<input type="text" placeholder="Search">').appendTo($(column.header()).empty())
+                    .on('keyup change', function () {
+                        if (column.search() !== this.value) {
+                            column.search(this.value).draw();
+                        }
+                    });
+                });
+            }
+        });
+
+        // Initialize column resizable functionality
+        $('#employeeTable').colResizable({
+            liveDrag: true,
+            gripInnerHtml: "<div class='grip'></div>",
+            draggingClass: "dragging"
+        });
+    });
+</script>
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h3>Employee List</h3>
+        </div>
+        <div class="card">
+            <div class="table-responsive">
+              <table  class="table align-items-center mb-0">
+                    <thead>
+                        <tr>
+                            <th class="align-middle text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Job Number</th>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Full Name</th>
+                            <th class="align-middle text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nat</th>
+                            <th class="align-middle text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Start Date</th>
+                            <th class="align-middle text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Salary</th>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Department</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for employee in employees %}
+                        <tr>
+                            <td class="align-middle text-center">
+                                <span class="text-secondary text-xs font-weight-bold">{{ employee.job_number }}</span>
+                              </td>
+                              <td>
+                                <div class="d-flex px-2 py-1">
+                                  <div class="d-flex flex-column justify-content-center">
+                                    <h6 class="mb-0 text-xs">{{ employee.name }}</h6>
+                                    <p class="text-xs text-secondary mb-0">{{ employee.email }}</p>
+                                  </div>
+                                </div>
+                              </td> 
+                              <td class="align-middle text-center">
+                                <span class="text-secondary text-xs font-weight-bolder">{{ employee.nationality }}</span>                            
+                             </td>               
+                                <td class="align-middle text-center">
+                                    <span class="text-secondary text-xs ">{{ employee.start_date }}</span>                            
+                                </td> 
+                                <td class="align-middle text-center">
+                                    <span class="text-secondary text-xs font-weight-bold">{{ employee.salary }} $</span>                            
+                                </td> 
+                                <td class="text-xxs mb-0">
+                                    <p class="text-xs font-weight-bold mb-0">{{ employee.department }}</p>                    
+                                    <div class="truncate" title="{{ employee.get_job_title_display }}">
+                                     {{ employee.get_job_title_display }}
+                                     </div>
+                                </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block javascript %}
+<script>
+    $(document).ready(function() {
+        var table = $('#employeeTable').DataTable({
+            initComplete: function () {
+                this.api().columns().every(function () {
+                    var column = this;
+                    if (column.index() === 4 || column.index() === 5) {  // Nationality and Department
+                        var select = $('<select><option value=""></option></select>')
+                            .appendTo($(column.header()).empty())
+                            .on('change', function () {
+                                var val = $.fn.dataTable.util.escapeRegex($(this).val());
+                                column.search(val ? '^' + val + '$' : '', true, false).draw();
+                            });
+    
+                        column.data().unique().sort().each(function (d, j) {
+                            select.append('<option value="' + d + '">' + d + '</option>')
+                        });
+                    } else {
+                        var input = $('<input type="text" placeholder="Search">').appendTo($(column.header()).empty())
+                        .on('keyup change', function () {
+                            if (column.search() !== this.value) {
+                                column.search(this.value).draw();
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    
+        // Initialize column resizable functionality
+        $('#employeeTable').colResizable({
+            liveDrag: true,
+            gripInnerHtml: "<div class='grip'></div>",
+            draggingClass: "dragging"
+        });
+    });
+</script>
+<script>
+// For range filtering
+$.fn.dataTable.ext.search.push(
+    function(settings, data, dataIndex) {
+        var minSalary = parseFloat($('#minSalary').val()) || 0;
+        var maxSalary = parseFloat($('#maxSalary').val()) || 9999999999;
+        var salary = parseFloat(data[8]) || 0; // Use data for the salary column
+
+        if (salary >= minSalary && salary <= maxSalary) {
+            return true;
+        }
+        return false;
+    }
+);
+
+$('#minSalary, #maxSalary').keyup(function() {
+    table.draw();
+});
+</script>
+
+{% endblock javascript %}
+
+{% endblock content %}

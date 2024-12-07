@@ -1,0 +1,16 @@
+{% load static i18n %}
+<footer class="footer pt-3">
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-lg-between">  
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link text-muted" href="#home">{% trans "Home" %}</a></li>
+                <li class="nav-item"><a class="nav-link text-muted" href="#about">{% trans "About" %}</a></li>
+                <li class="nav-item"><a class="nav-link text-muted" href="#service">{% trans "Facilities" %}</a></li>
+                <li class="nav-item"><a class="nav-link text-muted" href="{% url 'app:privacypolicy' %}">{% trans "Privacy Policy" %}</a></li>
+                <li class="nav-item"><a class="nav-link text-muted" href="{% url 'app:TermsofService' %}">{% trans "Terms of Service" %}</a></li>
+             </ul>
+          </div>
+      </div>
+  </div> 
+    
+</footer>
